@@ -1,0 +1,42 @@
+KEP
+2 0 1 4
+a.
+Required Contract Provisions
+For any contract or amendment to an existing contract related to the procurement of
+energy, grid services, and fuel3 for an aggregate value of at least $10 million; contracts for
+infrastructure work14 for an aggregate value of at least $1 million; and contracts for
+professional services15 for an aggregate value of at least $250,000, executed by PREPA after
+the issuance of this Order, the Commission ORDERS PREPA to include the following
+provisions:
+(1) A clause stating that the contract will not enter into force unless PREPA has received
+written approval from the Commission or unless five business days have passed after
+PREPA's submission of the contract to the Commission with no action from the
+Commission. The Commission, on notice to PREPA within the five-day period
+mentioned above, may extend such period for unusually complex contracts, provided
+such period shall never exceed 30 calendar days from the date of submission of the
+contract to the Commission
+(2) A clause stating that, if the Commission finds, or has reasonable belief, that the work
+being performed is defective, inconsistent with the terms and conditions of the
+contract, with applicable legal and regulatory requirements or with any prior
+Commission order or directive, the Commission may order PREPA to direct a
+contractor to immediately cease the provision of services until the Commission states
+otherwise, or until 15 business days from the date the Commission's stop-order was
+issued if the Commission fails to take any action within such timeframe. After the
+issuance of a stop-order, and after granting PREPA and the contractor reasonable
+opportunity to be heard, the Commission may determine to authorize continuation of
+services, require corrective measures to be taken, including contract amendments, or
+require the termination of the contract.
+13 The Commission intends the term "energy, grid services, and fuel" to refer to provision of energy to be
+consumed by PREPA or sold by PREPA to customers; to the commitment to make generating capacity available
+when needed (commonly referred to as "capacity services"); to credits associated with production of "green"
+or renewable energy as defined by Act 83-2010; to administration of energy efficiency, demand response, and
+other demand-side management programs; to the services necessary to support the transmission of electric
+power to customers, including but not limited to frequency and voltage regulation, operating and spinning
+reserves, startup-related costs, black start capabilities, and flexible ramping capabilities; to purchases of
+combustible fuels; and to tolling, transportation, or other delivery payments associated with fuel purchases.
+14 The Commission intends the term "infrastructure work" to refer to materials purchased for and labor applied
+to PREPA's physical assets. These assets include, but are not limited to, generation, transmission, distribution,
+fuel delivery, information technology, warehousing, and transportation infrastructure and assets.
+5 The Commission intends the term "professional services" to refer to work for hire that has no impact on
+PREPA's physical assets, including but not limited to: legal services; advisory services; modeling, potential
+studies, and other analyses; engineering and design work, and others.

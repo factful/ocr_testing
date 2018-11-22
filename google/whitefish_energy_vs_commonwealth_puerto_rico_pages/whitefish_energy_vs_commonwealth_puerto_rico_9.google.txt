@@ -1,0 +1,57 @@
+Transmission Restoration Progress Report - As of March 28, 2018
+Overall progress on transmission line restoration is 75%, calculated as completed line segments divided
+by total line segments
+· Progress on structure and component repair is 71%
+TRANSMISSION LINE STATUS
+75%
+OVERALL PROGRESS
+(As per completedTasks)
+TOTALS BY kV
+(kV) LINE SEGMENT COMPLETED
+17
+14
+115 86
+sage
+otls 103
+TOTALS BY RESOURCE
+58
+5
+PREPA
+WHITEFISH
+COBRA 12
+NYPA
+FluorPIKE
+FluoriARC
+Fluor/MasTec
+Fluor SEC
+DAMAGES
+STRUCTURES
+Towers/Poles)
+Overall
+Repairs/Restoration %
+(Conductors/Insulators)
+(kV) DOWN
+230 107
+115 648
+Totals755
+DEFICIENCY
+103
+420
+523
+404
+833
+1237
+317
+578
+895
+82%
+67%
+71%
+3
+USACE/PowerSecure3
+Pending 14
+Totals103
+Puerto Rico5
+Electric Power
+Authority
+2
