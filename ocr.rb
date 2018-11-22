@@ -1,7 +1,7 @@
 #! /usr/bin/env ruby
 
 def ocr(target, destination)
-  cmd = "tesseract #{target} #{destination}"
+  cmd = "tesseract #{target} #{destination}.tesseract"
   `#{cmd}`
 end
 
