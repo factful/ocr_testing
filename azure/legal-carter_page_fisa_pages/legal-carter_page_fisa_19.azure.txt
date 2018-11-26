@@ -1,0 +1,25 @@
+bl-l
+b3-1
+b7A-1
+b7D-1
+b7E-l,2
+bl-l
+b3-1
+b7A-1
+b7D-1
+b7E-1,2
+bl-l
+b3-1
+b7A 1
+b7D-1
+b7E-1, 2
+bl-l
+b3-1
+b7A-1
+b7D-1
+b7E.1,2
+bl-l
+b3-1
+b7A-1
+b7D-l
+b7E-l,2
