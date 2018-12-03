@@ -6,7 +6,8 @@ def ocr(target, destination)
 end
 
 def convert(target, destination)
-  cmd = "mutool convert -F png -o #{destination} #{target}"
+  resolution = true ? "-O resolution=300" : ""
+  cmd = "mutool convert #{resolution} -F png -o #{destination} #{target}"
   `#{cmd}`
 end
 
