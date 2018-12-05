@@ -18,7 +18,7 @@ raise ArgumentError unless destination_base
 
 def binarize(dir_path, options={})
   destination = options[:destination] ? options[:destination] : "derp"
-  cmd = "#{File.join(BIN_DIR, "ocropus-nlbin")} -o #{destination} #{File.join(dir_path, "*.png")}"
+  cmd = "#{File.join(BIN_DIR, "ocropus-nlbin")} -n -o #{destination} #{File.join(dir_path, "*.png")}"
   output = `#{cmd}`
   puts output
   return destination
@@ -55,9 +55,7 @@ def compile_text(path, options={})
   end
   paths.each do |page, lines|
     File.open(File.join(destination_base, "#{page}.txt"), "w") do |file|
-      lines.each do |line|
-        file.puts File.read(line)
-      end
+      lines.each{ |line| file.puts File.read(line) }
     end
   end
 end
@@ -73,7 +71,7 @@ def recognize(path, options={})
   puts "Recognizing lines"
   recognize_lines(options[:model], File.join(destination_base, "*", "*.bin.png"))
   puts "Compiling text"
-  compile_text(File.join(destination_base, "*", "*.txt"))
+  compile_text(File.join(destination_base, "*", "*.txt"), destination_base: destination_base)
 end
 
 recognize(target, {destination_base:destination_base, model: model})
