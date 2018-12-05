@@ -27,16 +27,18 @@ OCRopus requires images being processed to be 300 dpi, which is also a pain in t
 I followed [the instructions in the Readme](https://github.com/tmbdev/ocropy#running) and any time they didn't work, [i just followed github issue instructions](https://github.com/tmbdev/ocropy/issues/241).
 
 
-
 [OCRopus_github]: https://github.com/tmbdev/ocropy
 
 ## Still to be tested
 
 * [Abbyy Cloud API](https://www.ocrsdk.com/)
 * [Adobe Acrobat](https://acrobat.adobe.com/us/en/acrobat/how-to/ocr-software-convert-pdf-to-text.html)
-* [Amazon Rekognition API](https://aws.amazon.com/rekognition/)
+* [Amazon Rekognition API](https://aws.amazon.com/rekognition/) -- not going to test this because it was primarily designed for identifying text like signs and labels in images and because implementing it is too challenging for a thought exercise. 
+* Amazon Textract -- beta. 
 * [OCRopus](https://github.com/tmbdev/ocropy) (also see: [this blog post](https://www.danvk.org/2015/01/09/extracting-text-from-an-image-using-ocropus.html))
 * [Calamari]()
-
+* Swift OCR
+* Kraken
+* Attention OCR
 
 
