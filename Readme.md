@@ -1,8 +1,14 @@
 # OCR comparison
 
-## Tesseract
+Most of the tools we tested support text in multiple languages but we only tested on English language documents. The Ruby scripts we used are all included in our [repository](LINK TK) if you want to test these OCR engines with other languages.
 
-See the `tesseract` directory for results
+## [Tesseract](https://github.com/tesseract-ocr/tesseract)
+
+[Tesseract](https://github.com/tesseract-ocr/tesseract) is a free and open source command line OCR engine that was developed at Hewlett-Packard in the late 90s, and has been maintained by Google since 2006. It is well documented and easy to use CHECK but DOES IT NEED TRAINING?
+
+Their [installation instructions](https://github.com/tesseract-ocr/tesseract/wiki) are reasonably comprehensive. We were able to follow them and get Tesseract running without any additional troubleshooting.
+
+Tesseract will return results as plain text, hOCR or in a PDF, text overlaid on the original image.
 
 ## [Google Cloud Vision API][GCP_Vision]
 
@@ -33,12 +39,10 @@ I followed [the instructions in the Readme](https://github.com/tmbdev/ocropy#run
 
 * [Abbyy Cloud API](https://www.ocrsdk.com/)
 * [Adobe Acrobat](https://acrobat.adobe.com/us/en/acrobat/how-to/ocr-software-convert-pdf-to-text.html)
-* [Amazon Rekognition API](https://aws.amazon.com/rekognition/) -- not going to test this because it was primarily designed for identifying text like signs and labels in images and because implementing it is too challenging for a thought exercise. 
-* Amazon Textract -- beta. 
+* [Amazon Rekognition API](https://aws.amazon.com/rekognition/) -- not going to test this because it was primarily designed for identifying text like signs and labels in images and because implementing it is too challenging for a thought exercise.
+* Amazon Textract -- beta.
 * [OCRopus](https://github.com/tmbdev/ocropy) (also see: [this blog post](https://www.danvk.org/2015/01/09/extracting-text-from-an-image-using-ocropus.html))
 * [Calamari]()
 * Swift OCR
 * Kraken
 * Attention OCR
-
-
