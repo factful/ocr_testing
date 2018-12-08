@@ -16,7 +16,12 @@ See the `google` directory for results
 
 [GCP_Vision]: https://cloud.google.com/vision/
 
-## [Microsoft Azure Comptuational Vision API][Azure_Vision]
+## [Microsoft Azure Computer Vision][Azure_Vision]
+
+[Computer Vision](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/) is Microsoft Azure's OCR tool -- it's available as an API (that you can use at the command line) or as an SDK if you want to bake it into another application. 
+. TED: YOU HAD SOME /THOUGHTS ABOUT SETUP CHALLENGES? There are a few steps to getting started with MS Azure.
+
+
 
 [Azure_Vision]: https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/
 
@@ -24,7 +29,7 @@ See the `azure` directory for results
 
 ## [OCRopus][OCRopus_github]
 
-[OCRopus](https://github.com/tmbdev/ocropy) is a collection of document analysis tools. TK: IS IT GENUINELY MORE THAN OCR? OR JUST MORE COMPLEX? ANY OTHER NOTES TO INCLUDE IN TEXT?
+[OCRopus](https://github.com/tmbdev/ocropy) is a collection of document analysis tools. TK: IS IT GENUINELY MORE THAN OCR? OR JUST MORE COMPLEX? ANY OTHER NOTES TO INCLUDE IN TEXT? WHAT ELSE IS WORTH SAYING HERE FOR CONTEXT?
 
 OCRopus requires python 2.7 so you probably want to use `virtualenv` to install it and manage dependancies. We had hiccups using the installation instructions in the [Readme file](https://github.com/tmbdev/ocropy#running), but found workable [installation instructions](https://github.com/tmbdev/ocropy/issues/241) hiding in an issue. You'll also want to [follow some specialized instructions](https://markhneedham.com/blog/2018/05/04/python-runtime-error-osx-matplotlib-not-installed-as-framework-mac/) to get `matplotlib` running in a Python 2.7 `virutalenv`.
 
