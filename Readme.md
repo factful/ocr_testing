@@ -61,3 +61,9 @@ I followed [the instructions in the Readme](https://github.com/tmbdev/ocropy#run
 * Attention OCR
 
 We initially included [Amazon's Rekognition API](https://aws.amazon.com/rekognition/) on our list, but ultimately decided not to test it. Rekognition is primarily designed to identify text in images of signs and labels, rather than in documents. It's more challenging to implement than the other OCR tools we looked at and we didn't have a need for that level of power.
+
+# Working with OCR'd documents
+
+## Searching Text & what to be aware of
+
+## Layout analysis
