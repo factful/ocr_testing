@@ -18,9 +18,9 @@ See the `google` directory for results
 
 ## [Microsoft Azure Computer Vision][Azure_Vision]
 
-[Computer Vision](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/) is Microsoft Azure's OCR tool -- it's available as an API (that you can use at the command line) or as an SDK if you want to bake it into another application. 
-. TED: YOU HAD SOME /THOUGHTS ABOUT SETUP CHALLENGES? There are a few steps to getting started with MS Azure.
+[Computer Vision](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/) is Microsoft Azure's OCR tool -- it's available as an API that you can use at the command line or as an SDK if you want to bake it into another application. Azure provides sample jupyter notebooks, which is helpful. Their API doesn't return plain text results, however. The only way to get those is to scrape the text out of the bounding boxes. Our script or their sample scripts will do that nicely though. 
 
+There are a handful of steps that you need to follow to use Computer Vision -- their [quickstart guide](https://docs.microsoft.com/en-us/azure/cognitive-services/Computer-vision/quickstarts/python-disk) spells them out, but you need to set up an Azure cloud account, set your permissions **TED: IN AZURE?** to create an application that you can get keys from and then get the subscription keys you need to actually use the API. The steps might seem a bit circular but you'll get there.
 
 
 [Azure_Vision]: https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/
