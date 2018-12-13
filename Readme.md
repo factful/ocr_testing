@@ -64,6 +64,36 @@ We initially included [Amazon's Rekognition API](https://aws.amazon.com/rekognit
 
 # Working with OCR'd documents
 
-## Searching Text & what to be aware of
+## Types of tasks
 
-## Layout analysis
+- search indexing
+- transcription
+- layout analysis
+- information extraction
+- document classification
+
+OCR tools vary in quality and robustness.  Whether they will do a good job depend on the task you'd like to accomplish.  Literal transcription of text, where exact accuracy is important, may be hard to accomplish automatically without additional review by a person.
+
+On the other hand, searching for documents keywords may not require exact accuracy to surface documents.  For example, a name may be mentioned multiple times in a document, and so long as it's recognized correctly _once_, a search query will find it.
+
+Sometimes
+
+### Searching Text & what to be aware of
+
+- OCR engines are far from perfect.
+- basic literal search isn't going to produce perfect results.
+- even regular expressions aren't going to be great (word breaks, recognition errors)
+- What kinds of errors do OCR engines produce?
+
+### Layout analysis
+
+- Position data can help, and sometimes it's necessary
+- OCR systems do some basic layout analysis.
+- What if you need to do more analysis?
+
+# Goofy things
+
+- [Darius Kazemi's Reverse OCR](http://reverseocr.tumblr.com/)
+- [Tesseract.js](https://github.com/naptha/tesseract.js)
+- [Unfortunate OCR in historic books](https://wraabe.wordpress.com/2009/03/07/an-ocr-cliche-into-hisher-anus/)
+- [Dan Nguyen did some cool stuff](https://gist.github.com/dannguyen/a0b69c84ebc00c54c94d)
