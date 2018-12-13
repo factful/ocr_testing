@@ -1,6 +1,6 @@
 #! /usr/bin/env ruby
 
-# See Azure API documentation:
+# Azure API documentation:
 # https://westus.dev.cognitive.microsoft.com/docs/services/5adf991815e1060e6355ad44/operations/56f91f2e778daf14a499e1fa
 #
 # API limitations:
@@ -9,9 +9,9 @@
 #  * Image file size must be less than 4MB.
 #  * Image dimensions must be at least 50 x 50.
 
-# Azure doesn't have an API library for Ruby (or much 
-# of anything from what i can tell), so instead we're 
+# Azure doesn't have an API library for Ruby, so instead we're
 # going to use RestClient to interact with their REST API directly.
+
 require 'rest-client'
 require 'json'
 
@@ -20,7 +20,7 @@ def ocr(path)
   region = "eastus"
   # This is the REST endpoint we're going to communicate with.
   url = "https://#{region}.api.cognitive.microsoft.com/vision/v2.0/ocr"
-  # Azure's other demos indicate that we can specify 
+  # Azure's other demos indicate that we can specify
   # the language or set it to "unk".  We'll also have
   # it guess at the orientation, just in case our
   # documents are oriented in a direction other than up.
@@ -30,8 +30,8 @@ def ocr(path)
     detectOrientation: 'true'
   }
   # In order to make the API actually accept a request
-  # we'll need to read the credentials somewhere.
-  # I'm reading it out of the ENV.
+  # we'll need to read the credentials somewhere. This
+  # script assumes it's an ENV variable.
   headers = {
     'Ocp-Apim-Subscription-Key': ENV['AZURE_KEY'],
     'Content-Type': 'application/json'
@@ -49,6 +49,7 @@ def ocr(path)
   File.open("#{dirname}/#{basename}.azure.json", 'w'){ |f| f.puts response.body }
 end
 
+# Parse the plain text
 # Azure doesn't provide the text in an easily accesible way.
 # In order to get the text, you have to unpeel the position
 # data/containers to get down to the individual words.
@@ -63,7 +64,7 @@ def parse_results(data)
   end
 end
 
-# Read the first 
+# Read the first
 arg_path = ARGV.first
 File.directory?(arg_path)
 paths = Dir.glob(File.join arg_path, '*.{png,jpg}')
