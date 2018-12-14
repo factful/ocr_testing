@@ -17,7 +17,7 @@ Tesseract will return results as plain text, hOCR or in a PDF, text overlaid on 
 
 See the `google` directory for results
 
-Dan Nguyen has published a [few additional Python scripts](https://gist.github.com/dannguyen/a0b69c84ebc00c54c94d) that he used to compare Cloud Vision and Tesseract. 
+Dan Nguyen has published a [few additional Python scripts](https://gist.github.com/dannguyen/a0b69c84ebc00c54c94d) that he used to compare Cloud Vision and Tesseract.
 
 
 **Pricing:** Your first 1000 pages each month are free. After that you'll pay $1.50 per thousand pages. In addition, Google Cloud Vision currently offers a free trial that will get you $300 in free credits, which is enough to process 200K pages in one month. When you get to 10 million pages the price drops to $0.60 per thousand pages.  
@@ -31,7 +31,7 @@ Dan Nguyen has published a [few additional Python scripts](https://gist.github.c
 There are a handful of steps that you need to follow to use Computer Vision -- their [quickstart guide](https://docs.microsoft.com/en-us/azure/cognitive-services/Computer-vision/quickstarts/python-disk) spells them out, but you need to set up an Azure cloud account, set your permissions **TED: IN AZURE?** to create an application that you can get keys from and then get the subscription keys you need to actually use the API. The steps might seem a bit circular but you'll get there.
 
 
-**Pricing:**
+**Pricing:** Your first 5000 pages each month are free. After that you'll pay $1.50 per thousand pages and the per-thousand page price drops again at 1,000,000 pages and at 5,000,000 pages.
 
 ## [OCRopus][OCRopus_github]
 [OCRopus_github]: https://github.com/tmbdev/ocropy
@@ -122,6 +122,9 @@ Sometimes
 - Skip. [Unfortunate OCR in historic books](https://wraabe.wordpress.com/2009/03/07/an-ocr-cliche-into-hisher-anus/)
 -
 
+## Pricing
+
+Most cloud API services charge per thousand pages after some number of free pages per month. As of this writing, ... TK. 
 
 ## More
 
