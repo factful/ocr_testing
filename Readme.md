@@ -1,6 +1,22 @@
-# OCR comparison
 
-Most of the tools we tested support text in multiple languages but we only tested on English language documents. The Ruby scripts we used are all included in our [repository](LINK TK) if you want to test these OCR engines with other languages or sample documents. .
+# Post Intro
+
+At Factful one of our projects is to build tools that make state of the art machine learning and artificial intelligence accessible to investigative reporters. One thing that means is that we need to spend some time testing the components that already exist so we can prioritize our own efforts. The first step in any kind of document analysis is OCR, or optical character recognition, which allows us to transform a scan or photograph of a letter or filing into searchable, sortable text that we can do more with.
+
+[INSERT SOME NOTES FROM JORDAN ABOUT WHERE THE CUTTING EDGE IS HEADED]
+
+With all that in mind, we identified a few sample documents to run through a handful of OCR systems so we could compare the results. We tested a few proprietary algorithms and a few that are free and open source.
+
+All the tools we looked at will output a text file. Most will also output JSON or hOCR files that include data about where each word and line sits on a particular page. [hOCR](http://kba.cloud/hocr-spec/1.2/) is an open standard for representing OCR results -- there are a few open source CSS and JavaScript libraries that can help you view and display hOCR formats. Check out [hocrjs](http://kba.cloud/hocrjs/), [hOCR Proofreader](https://github.com/not-implemented/hocr-proofreader), and [hOCR JavaScript](https://github.com/ultrasaurus/hocr-javascript) for some good starting points.
+
+We identified a few loosely representative document samples to try each OCR library against:
+
+* A **receipt** --  we identified a register receipt with some hand writing on it, to make it a little more fun for the APIs. (This receipt, from one graffiti artist's time at Rikers, was included in [States of Incarceration](https://statesofincarceration.org/states/new-york-rikers-island-ny-11370-plain-sight), a collaborative storytelling project and traveling exhibition about incarceration in America.)
+* A **heavily redacted document** -- [Carter Page's FISA warrant](http://www.kingpin.cc/wp-content/uploads/2018/11/Carter-Page-release-9-November-2018.pdf) is legal filing with a lot of redacted portions, just the kind of exasperating thing reporters deal with all the time.
+* **Something old** -- [Executive Order 9066](https://www.archives.gov/historical-docs/todays-doc/?dod-date=219) authorized the internment of Japanese Americans in 1942. The scanned image available in the national archives is fairly high quality but it is still an old, typewritten document.
+* A **form** -- This [Texas campaign finance report](http://204.65.203.5/public/100721233.pdf), from [a Texas Tribune story about abuses in the juvenile justice system](https://www.texastribune.org/2018/11/01/harris-county-texas-juvenile-judges-private-attorneys/amp/) has very clean text but the formatting is important to understanding the document.
+
+The tools we tested support text in multiple languages but we only tested on English language documents. The Ruby scripts we used are all included in our [repository](LINK TK) if you want to test these OCR engines with other languages or sample documents. 
 
 ## [Tesseract](https://github.com/tesseract-ocr/tesseract)
 
@@ -68,22 +84,6 @@ I followed [the instructions in the Readme](https://github.com/tmbdev/ocropy#run
 
 We initially included [Amazon's Rekognition API](https://aws.amazon.com/rekognition/) on our list, but ultimately decided not to test it. Rekognition is primarily designed to identify text in images of signs and labels, rather than in documents. It's more challenging to implement than the other OCR tools we looked at and we didn't have a need for that level of power.
 
-# Post Intro
-
-At Factful one of our projects is to build tools that make state of the art machine learning and artificial intelligence accessible to investigative reporters. One thing that means is that we need to spend some time testing the components that already exist so we can prioritize our own efforts. The first step in any kind of document analysis is OCR, or optical character recognition, which allows us to transform a scan or photograph of a letter or filing into searchable, sortable text that we can do more with.
-
-[INSERT SOME NOTES FROM JORDAN ABOUT WHERE THE CUTTING EDGE IS HEADED]
-
-With all that in mind, we identified a few sample documents to run through a handful of OCR systems so we could compare the results. We tested a few proprietary algorithms and a few that are free and open source.
-
-All the tools we looked at will output a text file. Most will also output a JSON or hOCR file that includes geometry data about where each word and line sits on a particular page. [INSERT EXPLANATION OF hOCR] -- This is the data you'd need to [INSERT DO WHAT? WHAT CAN WE SAY IN PLAIN ENGLISH ABOUT HOW TO START THINKING ABOUT WHAT YOU CAN DO WITH HOCR]
-
-We wanted to test a few representative document samples:
-
-* A receipt --  we identified a register receipt with some hand writing on it, to make it a little more fun for the APIs. (This receipt, from one graffiti artist's time at Rikers, was included in [States of Incarceration](https://statesofincarceration.org/states/new-york-rikers-island-ny-11370-plain-sight), a collaborative storytelling project and traveling exhibition about incarceration in America.)
-* A document with a decent amount of redacting -- [Carter Page's FISA warrant](http://www.kingpin.cc/wp-content/uploads/2018/11/Carter-Page-release-9-November-2018.pdf) is a heavily redacted legal filing, just the kind of exasperating thing reporters deal with all the time.
-* A historical document -- [Executive Order 9066](https://www.archives.gov/historical-docs/todays-doc/?dod-date=219) authorized the internment of Japanese Americans in 1942. The scanned image available in the national archives is fairly high quality but it is still an old, typewritten document.
-* A form -- This [Texas campaign finance report](http://204.65.203.5/public/100721233.pdf), from [a Texas Tribune story about abuses in the juvenile justice system](https://www.texastribune.org/2018/11/01/harris-county-texas-juvenile-judges-private-attorneys/amp/) has very clean text but the formatting is important to understanding the document.
 
 # Working with OCR'd documents
 
@@ -124,7 +124,7 @@ Sometimes
 
 ## Pricing
 
-Most cloud API services charge per thousand pages after some number of free pages per month. As of this writing, ... TK. 
+Most cloud API services charge per thousand pages after some number of free pages per month. As of this writing, ... TK.
 
 ## More
 
