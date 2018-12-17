@@ -58,7 +58,7 @@ Dan Vanderkam's [blog post](https://www.danvk.org/2015/01/09/extracting-text-fro
 OCRopus needs higher resolution images than the other OCR engines we tested -- you'll [see a lot of errors](https://github.com/tmbdev/ocropy/wiki/FAQ#what-exactly-is-meant-by-300-dpi-for-digital-images) if your resolution is below 300 dpi.
 
 ### [Kraken](http://kraken.re/)
-[Kraken](http://kraken.re/) is a turnkey OCR system forked from OCRopus. Kraken does output geometry in hOCR or ALTO format. TODO: TEST
+[Kraken](http://kraken.re/) is a turnkey OCR system forked from OCRopus. Kraken does output geometry in hOCR or ALTO format. (Analyzed Layout and Text Object is an XML schema for text and layout information. It's a well developed standard but we didn't encounter other tools that output ALTO in our testing.) TODO: TEST hOCR OUTPUT 
 
 **Pricing:**  OCRopus is free and open source.
 
