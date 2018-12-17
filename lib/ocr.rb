@@ -5,6 +5,9 @@ require 'fastimage'
 require 'thor'
 require 'rest-client'
 
+HERE = File.dirname(__FILE__)
+require File.join(HERE, "ocr", "utility")
+
 =begin
 
 # Additional Dependencies
@@ -24,20 +27,6 @@ lol i don't remember at all.  will have to read back through the documentation. 
 =end
 
 module OCR
-  def select_images(glob)
-    # get all the files in a directory, if user passes in a bare directory
-    glob = "#{glob}/*" if File.directory?(glob)
-    # get all of the paths
-    paths = Dir.glob(glob)
-    # and filter down to just the images
-    images = paths.select do |path|
-      # by checking with FastImage.
-      (not File.directory?(path)) and FastImage.type(path)
-    end
-    puts "Selecting #{images.count} images from #{paths.count} files."
-    return images
-  end
-
   class OCRopus < Thor
 
     desc "[file or directory of files]", ""
@@ -64,14 +53,15 @@ module OCR
     option :resolution, aliases: "r"
     def rasterize(pdf)
       resolution = options[:resolution] ? "-O resolution=#{options[:resolution].to_i}" : ""
-      cmd = "mutool convert #{resolution} -F png -o #{destination} #{target}"
+      filetype = "png"
+      cmd = "mutool convert #{resolution} -F #{filetype} -o #{destination} #{target}"
       `#{cmd}`
     end
 
     desc "google [file or directory of files]", "OCR images with Google"
     option :credentials, aliases: "c"
     def google(path)
-      require "google/cloud/vision"
+      require File.join(HERE, 'ocr', 'google')
       
       puts "OCR images with Google!"
     end
