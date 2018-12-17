@@ -11,12 +11,12 @@ All the tools we looked at will output a text file. Most will also output JSON o
 
 We identified a few loosely representative document samples to try each OCR library against:
 
-* A **receipt** --  we identified a register receipt with some hand writing on it, to make it a little more fun for the APIs. (This receipt, from one graffiti artist's time at Rikers, was included in [States of Incarceration](https://statesofincarceration.org/states/new-york-rikers-island-ny-11370-plain-sight), a collaborative storytelling project and traveling exhibition about incarceration in America.)
+* A **receipt** -- This receipt from the Riker's commisary was included in [States of Incarceration](https://statesofincarceration.org/states/new-york-rikers-island-ny-11370-plain-sight), a collaborative storytelling project and traveling exhibition about incarceration in America.
 * A **heavily redacted document** -- [Carter Page's FISA warrant](http://www.kingpin.cc/wp-content/uploads/2018/11/Carter-Page-release-9-November-2018.pdf) is legal filing with a lot of redacted portions, just the kind of exasperating thing reporters deal with all the time.
 * **Something old** -- [Executive Order 9066](https://www.archives.gov/historical-docs/todays-doc/?dod-date=219) authorized the internment of Japanese Americans in 1942. The scanned image available in the national archives is fairly high quality but it is still an old, typewritten document.
 * A **form** -- This [Texas campaign finance report](http://204.65.203.5/public/100721233.pdf), from [a Texas Tribune story about abuses in the juvenile justice system](https://www.texastribune.org/2018/11/01/harris-county-texas-juvenile-judges-private-attorneys/amp/) has very clean text but the formatting is important to understanding the document.
 
-The tools we tested support text in multiple languages but we only tested on English language documents. The Ruby scripts we used are all included in our [repository](LINK TK) if you want to test these OCR engines with other languages or sample documents. 
+The tools we tested support text in multiple languages but we only tested on English language documents. The Ruby scripts we used are all included in our [repository](LINK TK) if you want to test these OCR engines with other languages or sample documents.
 
 ## [Tesseract](https://github.com/tesseract-ocr/tesseract)
 
@@ -31,46 +31,36 @@ Tesseract will return results as plain text, hOCR or in a PDF, text overlaid on 
 ## [Google Cloud Vision][GCP_Vision]
 [GCP_Vision]: https://cloud.google.com/vision/
 
-See the `google` directory for results
+NARRATIVE TK
 
 Dan Nguyen has published a [few additional Python scripts](https://gist.github.com/dannguyen/a0b69c84ebc00c54c94d) that he used to compare Cloud Vision and Tesseract.
 
 
 **Pricing:** Your first 1000 pages each month are free. After that you'll pay $1.50 per thousand pages. In addition, Google Cloud Vision currently offers a free trial that will get you $300 in free credits, which is enough to process 200K pages in one month. When you get to 10 million pages the price drops to $0.60 per thousand pages.  
 
-## [Microsoft Azure Computer Vision][Azure_Vision]
-[Azure_Vision]: https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/
+## [Microsoft Azure Computer Vision](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/)
 
-
-[Computer Vision](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/) is Microsoft Azure's OCR tool -- it's available as an API that you can use at the command line or as an SDK if you want to bake it into another application. Azure provides sample jupyter notebooks, which is helpful. Their API doesn't return plain text results, however. The only way to get those is to scrape the text out of the bounding boxes. Our script or their sample scripts will do that nicely though.
+[Computer Vision](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/) is Microsoft Azure's OCR tool. It's available as an API or as an SDK if you want to bake it into another application. Azure provides sample jupyter notebooks, which is helpful. Their API doesn't return plain text results, however. The only way to get those is to scrape the text out of the bounding boxes. Our script or their sample scripts will do that nicely though.
 
 There are a handful of steps that you need to follow to use Computer Vision -- their [quickstart guide](https://docs.microsoft.com/en-us/azure/cognitive-services/Computer-vision/quickstarts/python-disk) spells them out, but you need to set up an Azure cloud account, set your permissions **TED: IN AZURE?** to create an application that you can get keys from and then get the subscription keys you need to actually use the API. The steps might seem a bit circular but you'll get there.
 
 
 **Pricing:** Your first 5000 pages each month are free. After that you'll pay $1.50 per thousand pages and the per-thousand page price drops again at 1,000,000 pages and at 5,000,000 pages.
 
-## [OCRopus][OCRopus_github]
-[OCRopus_github]: https://github.com/tmbdev/ocropy
+## [OCRopus](https://github.com/tmbdev/ocropy)
 
+[OCRopus](https://github.com/tmbdev/ocropy) is a collection of document analysis tools that add up to functional OCR engine if you throw in a final script to stitch the `recognize` output into a text file. OCRopus doesn't provide geometry output -- but [Kraken](http://kraken.re/), built on
 
-[OCRopus](https://github.com/tmbdev/ocropy) is a collection of document analysis tools. TK: IS IT GENUINELY MORE THAN OCR? OR JUST MORE COMPLEX? ANY OTHER NOTES TO INCLUDE IN TEXT? WHAT ELSE IS WORTH SAYING HERE FOR CONTEXT?
+OCRopus requires python 2.7 so you probably want to use `virtualenv` to install it and manage dependencies. We had hiccups using the installation instructions in the [Readme file](https://github.com/tmbdev/ocropy#running), but found workable [installation instructions](https://github.com/tmbdev/ocropy/issues/241) hiding in an issue. You'll also need to [follow some specialized instructions](https://markhneedham.com/blog/2018/05/04/python-runtime-error-osx-matplotlib-not-installed-as-framework-mac/) to get `matplotlib` running in a Python 2.7 `virutalenv`.
 
-OCRopus requires python 2.7 so you probably want to use `virtualenv` to install it and manage dependancies. We had hiccups using the installation instructions in the [Readme file](https://github.com/tmbdev/ocropy#running), but found workable [installation instructions](https://github.com/tmbdev/ocropy/issues/241) hiding in an issue. You'll also want to [follow some specialized instructions](https://markhneedham.com/blog/2018/05/04/python-runtime-error-osx-matplotlib-not-installed-as-framework-mac/) to get `matplotlib` running in a Python 2.7 `virutalenv`.
+Dan Vanderkam's [blog post](https://www.danvk.org/2015/01/09/extracting-text-from-an-image-using-ocropus.html) about his experiences with OCRopus is also helpful.
 
- [this blog post is useful](https://www.danvk.org/2015/01/09/extracting-text-from-an-image-using-ocropus.html)
+OCRopus needs higher resolution images than the other OCR engines we tested -- you'll [see a lot of errors](https://github.com/tmbdev/ocropy/wiki/FAQ#what-exactly-is-meant-by-300-dpi-for-digital-images) if your resolution is below 300 dpi.
 
+### [Kraken](http://kraken.re/)
+[Kraken](http://kraken.re/) is a turnkey OCR system forked from OCRopus. Kraken does output geometry in hOCR or ALTO format. TODO: TEST
 
-Notes:
-Getting OCRopus set up is a pain in the ass.  It will only work on python 2.7, consequently it's probably best to use virtualenv to install and manage dependencies (or use docker? idk).
-
-Trying to run `matplotlib` w/in py2.7 in virtualenv fails unless you [follow instructions](https://markhneedham.com/blog/2018/05/04/python-runtime-error-osx-matplotlib-not-installed-as-framework-mac/) to specify the framework ([that were cribbed from StackOverflow](https://stackoverflow.com/questions/34977388/matplotlib-runtimeerror-python-is-not-installed-as-a-framework)).
-
-OCRopus requires images being processed to be 300 dpi, which is also a pain in the ass, but seems to have some scaling functions.
-
-I followed [the instructions in the Readme](https://github.com/tmbdev/ocropy#running) and any time they didn't work, [i just followed github issue instructions](https://github.com/tmbdev/ocropy/issues/241).
-
-
-**Pricing:**  OCRopus is free of charge.
+**Pricing:**  OCRopus is free and open source.
 
 ## Still to be tested
 
@@ -79,7 +69,6 @@ I followed [the instructions in the Readme](https://github.com/tmbdev/ocropy#run
 * Amazon Textract -- TED IS STILL WAITING TO HEAR BACK FROM BETA
 * [Calamari]() -- TED WILL TEST;
 * Swift OCR -- TED WILL CONFIRM THERE'S NO RUNNER; WE'D NEED TO RUN SOFTWARE? TBD
-* Kraken -- BUILT ON OCROPUS; WILL WORK INTO OCROPUS WRITEUP
 * Attention OCR -- TED WILL EXPERIMENT WITH THEIR RUNNER
 
 We initially included [Amazon's Rekognition API](https://aws.amazon.com/rekognition/) on our list, but ultimately decided not to test it. Rekognition is primarily designed to identify text in images of signs and labels, rather than in documents. It's more challenging to implement than the other OCR tools we looked at and we didn't have a need for that level of power.
