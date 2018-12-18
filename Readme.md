@@ -61,7 +61,7 @@ OCRopus needs higher resolution images than the other OCR engines we tested -- y
 ## Still to be tested
 
 * [Abbyy Cloud](https://www.ocrsdk.com/)
-* [Adobe Acrobat](https://acrobat.adobe.com/us/en/acrobat/how-to/ocr-software-convert-pdf-to-text.html) -- TED WILL CHECK: DO THEY HAVE A CLOUD SERVICE?
+* [Adobe Acrobat](https://acrobat.adobe.com/us/en/acrobat/how-to/ocr-software-convert-pdf-to-text.html) -- They do not have a cloud service.
 * Amazon Textract -- TED IS STILL WAITING TO HEAR BACK FROM BETA
 * [Calamari]() -- TED WILL TEST;
 * Swift OCR -- TED WILL CONFIRM THERE'S NO RUNNER; WE'D NEED TO RUN SOFTWARE? TBD
