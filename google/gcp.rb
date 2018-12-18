@@ -1,13 +1,12 @@
 # If you've walked through the first two steps of the
 # Cloud Vision API "Getting Started" guide at
-# https://cloud.google.com/vision/docs/auth and that
-# you have your credentials in a "credentials.json" file.
+# https://cloud.google.com/vision/docs/auth you should
+# have downloaded your credentials in a "credentials.json" file.
 
 # Before you run this script, you'll need to establish your
-# google application credentials as ENV variables. Do
-# that by creating "credentails.json" from our sample and
-# running the followin at the command line:
-# export GOOGLE_APPLICATION_CREDENTIALS=credentials.json
+# google application credentials in an ENV variable. Do
+# that by running the following on the command line:
+# export GOOGLE_APPLICATION_CREDENTIALS=path/to/your/credentials.json
 
 # Imports the Google Cloud client library
 require "google/cloud/vision"
