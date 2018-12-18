@@ -20,18 +20,15 @@ The tools we tested support text in multiple languages but we only tested on Eng
 
 ## [Tesseract](https://github.com/tesseract-ocr/tesseract)
 
-[Tesseract](https://github.com/tesseract-ocr/tesseract) is a free and open source command line OCR engine that was developed at Hewlett-Packard in the late 90s, and has been maintained by Google since 2006. It is well documented and easy to use CHECK but DOES IT NEED TRAINING?
+[Tesseract](https://github.com/tesseract-ocr/tesseract) is a free and open source command line OCR engine that was developed at Hewlett-Packard in the late 90s, and has been maintained by Google since 2006. It is well documented. Tesseract is written in C/C++. Their [installation instructions](https://github.com/tesseract-ocr/tesseract/wiki) are reasonably comprehensive. We were able to follow them and get Tesseract running without any additional troubleshooting.
 
-Their [installation instructions](https://github.com/tesseract-ocr/tesseract/wiki) are reasonably comprehensive. We were able to follow them and get Tesseract running without any additional troubleshooting.
+Tesseract will return results as plain text, hOCR or in a PDF, with text overlaid on the original image.
 
-Tesseract will return results as plain text, hOCR or in a PDF, text overlaid on the original image.
+**Pricing:** Tesseract is free and open source software.
 
-**Pricing:** Tesseract is free of charge.
+## [Google Cloud Vision](https://cloud.google.com/vision/)
 
-## [Google Cloud Vision][GCP_Vision]
-[GCP_Vision]: https://cloud.google.com/vision/
-
-NARRATIVE TK
+Is
 
 Dan Nguyen has published a [few additional Python scripts](https://gist.github.com/dannguyen/a0b69c84ebc00c54c94d) that he used to compare Cloud Vision and Tesseract.
 
@@ -44,12 +41,11 @@ Dan Nguyen has published a [few additional Python scripts](https://gist.github.c
 
 There are a handful of steps that you need to follow to use Computer Vision -- their [quickstart guide](https://docs.microsoft.com/en-us/azure/cognitive-services/Computer-vision/quickstarts/python-disk) spells them out, but you need to set up an Azure cloud account, set your permissions **TED: IN AZURE?** to create an application that you can get keys from and then get the subscription keys you need to actually use the API. The steps might seem a bit circular but you'll get there.
 
-
 **Pricing:** Your first 5000 pages each month are free. After that you'll pay $1.50 per thousand pages and the per-thousand page price drops again at 1,000,000 pages and at 5,000,000 pages.
 
 ## [OCRopus](https://github.com/tmbdev/ocropy)
 
-[OCRopus](https://github.com/tmbdev/ocropy) is a collection of document analysis tools that add up to functional OCR engine if you throw in a final script to stitch the `recognize` output into a text file. OCRopus doesn't provide geometry output -- but [Kraken](http://kraken.re/), built on
+[OCRopus](https://github.com/tmbdev/ocropy) is a collection of document analysis tools that add up to functional OCR engine if you throw in a final script to stitch the `recognize` output into a text file. OCRopus will output hOCR.
 
 OCRopus requires python 2.7 so you probably want to use `virtualenv` to install it and manage dependencies. We had hiccups using the installation instructions in the [Readme file](https://github.com/tmbdev/ocropy#running), but found workable [installation instructions](https://github.com/tmbdev/ocropy/issues/241) hiding in an issue. You'll also need to [follow some specialized instructions](https://markhneedham.com/blog/2018/05/04/python-runtime-error-osx-matplotlib-not-installed-as-framework-mac/) to get `matplotlib` running in a Python 2.7 `virutalenv`.
 
@@ -58,9 +54,9 @@ Dan Vanderkam's [blog post](https://www.danvk.org/2015/01/09/extracting-text-fro
 OCRopus needs higher resolution images than the other OCR engines we tested -- you'll [see a lot of errors](https://github.com/tmbdev/ocropy/wiki/FAQ#what-exactly-is-meant-by-300-dpi-for-digital-images) if your resolution is below 300 dpi.
 
 ### [Kraken](http://kraken.re/)
-[Kraken](http://kraken.re/) is a turnkey OCR system forked from OCRopus. Kraken does output geometry in hOCR or ALTO format. (Analyzed Layout and Text Object is an XML schema for text and layout information. It's a well developed standard but we didn't encounter other tools that output ALTO in our testing.) TODO: TEST hOCR OUTPUT 
+[Kraken](http://kraken.re/) is a turnkey OCR system forked from OCRopus. Kraken does output geometry in hOCR or ALTO format. (Analyzed Layout and Text Object is an XML schema for text and layout information. It's a well developed standard but we didn't encounter other tools that output ALTO in our testing.) TODO: TEST hOCR OUTPUT
 
-**Pricing:**  OCRopus is free and open source.
+**Pricing:**  OCRopus and Kraken are free and open source software.
 
 ## Still to be tested
 
