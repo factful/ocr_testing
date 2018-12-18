@@ -70,6 +70,10 @@ OCRopus needs higher resolution images than the other OCR engines we tested -- y
 We initially included [Amazon's Rekognition API](https://aws.amazon.com/rekognition/) on our list, but ultimately decided not to test it. Rekognition is primarily designed to identify text in images of signs and labels, rather than in documents. It's more challenging to implement than the other OCR tools we looked at and we didn't have a need for that level of power.
 
 
+# More on what we learned
+
+None of the tools we worked with got perfect results, but all of them were good enough to make documents more comprehensible. In most cases if you need a complete transcription you'll have to do some additional review and correction.
+
 # Working with OCR'd documents
 
 
@@ -107,9 +111,9 @@ Sometimes
 - Skip. [Unfortunate OCR in historic books](https://wraabe.wordpress.com/2009/03/07/an-ocr-cliche-into-hisher-anus/)
 -
 
-## Pricing
+## SKIP Pricing
 
-Most cloud API services charge per thousand pages after some number of free pages per month. As of this writing, ... TK.
+SKIP Most cloud API services charge per thousand pages after some number of free pages per month. As of this writing, ... TK.
 
 ## More
 
