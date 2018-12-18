@@ -3,11 +3,35 @@
 
 At Factful one of our projects is to build tools that make state of the art machine learning and artificial intelligence accessible to investigative reporters. One thing that means is that we need to spend some time testing the components that already exist so we can prioritize our own efforts. The first step in any kind of document analysis is OCR, or optical character recognition, which allows us to transform a scan or photograph of a letter or filing into searchable, sortable text that we can do more with.
 
-[INSERT SOME NOTES FROM JORDAN ABOUT WHERE THE CUTTING EDGE IS HEADED]
+[INSERT SOME NOTES FROM JORDAN ABOUT WHERE THE CUTTING EDGE IS HEADED; BIGRAMS? ]
+START NOTES
+
+Scene text recognition is going to change everything, in part because it can't rely on underlying OCR techniques like line detection. Signs aren't always aligned on a straight line.
+
+scene recognition vs. document recognition
+
+most of what we're looking at is document recognition. Often OCR falls down in document engines because document recognition chokes on font changes, inline graphics, and skewed text. So Scene recognition is better about spotting glyphs.
+
+Some use bigrams (and dictionaries?) to improve guesses
+
+tesseract will let you supply a dictionary. how is it using the dictionary?
+
+TED WILL DOUBLE CHECK TO MAKE SURE WE UNDERSTAND HOW TESSERACT USES BIGRAMS AND DICTIONARIES
+
+Interesting advances in pre-processing:
+* automatically de-warping images -- straightening out distorted text
+* super resolution -- boosting missing details based on probability from other pictures.
+* text in arbitrary locations
+* accomodating lower resolution text
+
+Papers worth reading are forthcoming from Jordan.
+
+
+END NOTES
 
 With all that in mind, we identified a few sample documents to run through a handful of OCR systems so we could compare the results. We tested a few proprietary algorithms and a few that are free and open source.
 
-All the tools we looked at will output a text file. Most will also output JSON or hOCR files that include data about where each word and line sits on a particular page. [hOCR](http://kba.cloud/hocr-spec/1.2/) is an open standard for representing OCR results -- there are a few open source CSS and JavaScript libraries that can help you view and display hOCR formats. Check out [hocrjs](http://kba.cloud/hocrjs/), [hOCR Proofreader](https://github.com/not-implemented/hocr-proofreader), and [hOCR JavaScript](https://github.com/ultrasaurus/hocr-javascript) for some good starting points.
+All the tools we looked at will output a text file. Most will also output JSON or hOCR files that include data about where each word and line sits on a particular page. [hOCR](http://kba.cloud/hocr-spec/1.2/) is an open standard for representing OCR results -- there are a few open source CSS and JavaScript libraries that can help you view and display hOCR formats. Check out [hocrjs](http://kba.cloud/hocrjs/), [hOCR Proofreader](https://github.com/not-implemented/hocr-proofreader), and [hOCR JavaScript](https://github.com/ultrasaurus/hocr-javascript) for some good starting points for actually taking advantage of hOCR.
 
 We identified a few loosely representative document samples to try each OCR library against:
 
@@ -28,7 +52,7 @@ Tesseract will return results as plain text, hOCR or in a PDF, with text overlai
 
 ## [Google Cloud Vision](https://cloud.google.com/vision/)
 
-Is
+Google's cloud services include an OCR tool, Vision. Of all the tools we tested, Vision did the best job of extracting useful results from the low resolution images we fed it. There are a few steps to getting it up and running, but [the documentation](https://cloud.google.com/vision/docs/how-to) covers them well. If you follow the setup instructions 
 
 Dan Nguyen has published a [few additional Python scripts](https://gist.github.com/dannguyen/a0b69c84ebc00c54c94d) that he used to compare Cloud Vision and Tesseract.
 
@@ -58,16 +82,23 @@ OCRopus needs higher resolution images than the other OCR engines we tested -- y
 
 **Pricing:**  OCRopus and Kraken are free and open source software.
 
+## [Adobe Acrobat](https://acrobat.adobe.com/us/en/acrobat/how-to/ocr-software-convert-pdf-to-text.html)
+
+Adobe doesn't provide API access to their OCR tools, but they will batch process documents.
+
+**Pricing:**
+
 ## Still to be tested
 
 * [Abbyy Cloud](https://www.ocrsdk.com/)
 * [Adobe Acrobat](https://acrobat.adobe.com/us/en/acrobat/how-to/ocr-software-convert-pdf-to-text.html) -- TED WILL CHECK: DO THEY HAVE A CLOUD SERVICE?
-* Amazon Textract -- TED IS STILL WAITING TO HEAR BACK FROM BETA
 * [Calamari]() -- TED WILL TEST;
 * Swift OCR -- TED WILL CONFIRM THERE'S NO RUNNER; WE'D NEED TO RUN SOFTWARE? TBD
 * Attention OCR -- TED WILL EXPERIMENT WITH THEIR RUNNER
 
 We initially included [Amazon's Rekognition API](https://aws.amazon.com/rekognition/) on our list, but ultimately decided not to test it. Rekognition is primarily designed to identify text in images of signs and labels, rather than in documents. It's more challenging to implement than the other OCR tools we looked at and we didn't have a need for that level of power.
+
+Amazon Textract is a new service from Amazon. We applied for access to the beta but hadn't received a response by the time we went to press.  
 
 
 # More on what we learned
