@@ -20,7 +20,7 @@ The tools we tested support text in multiple languages but we only tested on Eng
 
 ## [Tesseract](https://github.com/tesseract-ocr/tesseract)
 
-[Tesseract](https://github.com/tesseract-ocr/tesseract) is a free and open source command line OCR engine that was developed at Hewlett-Packard in the late 90s, and has been maintained by Google since 2006. It is well documented. Tesseract is written in C/C++. Their [installation instructions](https://github.com/tesseract-ocr/tesseract/wiki) are reasonably comprehensive. We were able to follow them and get Tesseract running without any additional troubleshooting.
+[Tesseract](https://github.com/tesseract-ocr/tesseract) is a free and open source command line OCR engine that was developed at Hewlett-Packard in the mid 80s, and has been maintained by Google since 2006. It is well documented. Tesseract is written in C/C++. Their [installation instructions](https://github.com/tesseract-ocr/tesseract/wiki) are reasonably comprehensive. We were able to follow them and get Tesseract running without any additional troubleshooting.
 
 Tesseract will return results as plain text, hOCR or in a PDF, with text overlaid on the original image.
 
@@ -47,7 +47,7 @@ There are a handful of steps that you need to follow to use Computer Vision -- t
 
 [OCRopus](https://github.com/tmbdev/ocropy) is a collection of document analysis tools that add up to functional OCR engine if you throw in a final script to stitch the `recognize` output into a text file. OCRopus will output hOCR.
 
-OCRopus requires python 2.7 so you probably want to use `virtualenv` to install it and manage dependencies. We had hiccups using the installation instructions in the [Readme file](https://github.com/tmbdev/ocropy#running), but found workable [installation instructions](https://github.com/tmbdev/ocropy/issues/241) hiding in an issue. You'll also need to [follow some specialized instructions](https://markhneedham.com/blog/2018/05/04/python-runtime-error-osx-matplotlib-not-installed-as-framework-mac/) to get `matplotlib` running in a Python 2.7 `virutalenv`.
+OCRopus requires python 2.7 so you probably want to use `virtualenv` to install it and manage dependencies. We had hiccups using the installation instructions in the [Readme file](https://github.com/tmbdev/ocropy#running), but found workable [installation instructions](https://github.com/tmbdev/ocropy/issues/241) hiding in an issue. You'll also need to [follow some specialized instructions](https://markhneedham.com/blog/2018/05/04/python-runtime-error-osx-matplotlib-not-installed-as-framework-mac/) to get `matplotlib` running in a Python 2.7 `virtualenv`.
 
 Dan Vanderkam's [blog post](https://www.danvk.org/2015/01/09/extracting-text-from-an-image-using-ocropus.html) about his experiences with OCRopus is also helpful.
 
