@@ -1,5 +1,12 @@
-# run the following to give google's library
-# the credentials it needs to function:
+# If you've walked through the first two steps of the
+# Cloud Vision API "Getting Started" guide at
+# https://cloud.google.com/vision/docs/auth and that
+# you have your credentials in a "credentials.json" file.
+
+# Before you run this script, you'll need to establish your
+# google application credentials as ENV variables. Do
+# that by creating "credentails.json" from our sample and
+# running the followin at the command line:
 # export GOOGLE_APPLICATION_CREDENTIALS=credentials.json
 
 # Imports the Google Cloud client library
@@ -27,8 +34,8 @@ paths.each_slice(16) do |image_paths|
   # open up the images,
   images = image_paths.map{ |f| vision.image(f) }
   # and send the batch to Google for OCR.
-  results = vision.annotate do |annotator| 
-    images.each do |i| 
+  results = vision.annotate do |annotator|
+    images.each do |i|
       annotator.annotate(i, text:true)
     end
   end
@@ -48,4 +55,3 @@ annotation_map.each do |path, data|
   File.open("#{dirname}/#{basename}.google.txt", 'w'){ |f| f.puts data.text }
   File.open("#{dirname}/#{basename}.google.json", 'w'){ |f| f.puts data.to_h.to_json }
 end
-
