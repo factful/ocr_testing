@@ -20,7 +20,7 @@ The tools we tested support text in multiple languages but we only tested on Eng
 
 ## [Tesseract](https://github.com/tesseract-ocr/tesseract)
 
-[Tesseract](https://github.com/tesseract-ocr/tesseract) is a free and open source command line OCR engine that was developed at Hewlett-Packard in the late 90s, and has been maintained by Google since 2006. It is well documented. Tesseract is written in C/C++. Their [installation instructions](https://github.com/tesseract-ocr/tesseract/wiki) are reasonably comprehensive. We were able to follow them and get Tesseract running without any additional troubleshooting.
+[Tesseract](https://github.com/tesseract-ocr/tesseract) is a free and open source command line OCR engine that was developed at Hewlett-Packard in the mid 80s, and has been maintained by Google since 2006. It is well documented. Tesseract is written in C/C++. Their [installation instructions](https://github.com/tesseract-ocr/tesseract/wiki) are reasonably comprehensive. We were able to follow them and get Tesseract running without any additional troubleshooting.
 
 Tesseract will return results as plain text, hOCR or in a PDF, with text overlaid on the original image.
 
@@ -47,7 +47,7 @@ There are a handful of steps that you need to follow to use Computer Vision -- t
 
 [OCRopus](https://github.com/tmbdev/ocropy) is a collection of document analysis tools that add up to functional OCR engine if you throw in a final script to stitch the `recognize` output into a text file. OCRopus will output hOCR.
 
-OCRopus requires python 2.7 so you probably want to use `virtualenv` to install it and manage dependencies. We had hiccups using the installation instructions in the [Readme file](https://github.com/tmbdev/ocropy#running), but found workable [installation instructions](https://github.com/tmbdev/ocropy/issues/241) hiding in an issue. You'll also need to [follow some specialized instructions](https://markhneedham.com/blog/2018/05/04/python-runtime-error-osx-matplotlib-not-installed-as-framework-mac/) to get `matplotlib` running in a Python 2.7 `virutalenv`.
+OCRopus requires python 2.7 so you probably want to use `virtualenv` to install it and manage dependencies. We had hiccups using the installation instructions in the [Readme file](https://github.com/tmbdev/ocropy#running), but found workable [installation instructions](https://github.com/tmbdev/ocropy/issues/241) hiding in an issue. You'll also need to [follow some specialized instructions](https://markhneedham.com/blog/2018/05/04/python-runtime-error-osx-matplotlib-not-installed-as-framework-mac/) to get `matplotlib` running in a Python 2.7 `virtualenv`.
 
 Dan Vanderkam's [blog post](https://www.danvk.org/2015/01/09/extracting-text-from-an-image-using-ocropus.html) about his experiences with OCRopus is also helpful.
 
@@ -69,6 +69,10 @@ OCRopus needs higher resolution images than the other OCR engines we tested -- y
 
 We initially included [Amazon's Rekognition API](https://aws.amazon.com/rekognition/) on our list, but ultimately decided not to test it. Rekognition is primarily designed to identify text in images of signs and labels, rather than in documents. It's more challenging to implement than the other OCR tools we looked at and we didn't have a need for that level of power.
 
+
+# More on what we learned
+
+None of the tools we worked with got perfect results, but all of them were good enough to make documents more comprehensible. In most cases if you need a complete transcription you'll have to do some additional review and correction.
 
 # Working with OCR'd documents
 
@@ -107,9 +111,9 @@ Sometimes
 - Skip. [Unfortunate OCR in historic books](https://wraabe.wordpress.com/2009/03/07/an-ocr-cliche-into-hisher-anus/)
 -
 
-## Pricing
+## SKIP Pricing
 
-Most cloud API services charge per thousand pages after some number of free pages per month. As of this writing, ... TK.
+SKIP Most cloud API services charge per thousand pages after some number of free pages per month. As of this writing, ... TK.
 
 ## More
 
