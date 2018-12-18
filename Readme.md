@@ -52,7 +52,7 @@ Tesseract will return results as plain text, hOCR or in a PDF, with text overlai
 
 ## [Google Cloud Vision](https://cloud.google.com/vision/)
 
-Google's cloud services include an OCR tool, Vision. Of all the tools we tested, Vision did the best job of extracting useful results from the low resolution images we fed it. There are a few steps to getting it up and running, but [the documentation](https://cloud.google.com/vision/docs/how-to) covers them well. If you follow the setup instructions 
+Google's cloud services include an OCR tool, Vision. Of all the tools we tested, Vision did the best job of extracting useful results from the low resolution images we fed it. There are a few steps to getting it up and running, but [the documentation](https://cloud.google.com/vision/docs/how-to) covers them well. If you follow the setup instructions
 
 Dan Nguyen has published a [few additional Python scripts](https://gist.github.com/dannguyen/a0b69c84ebc00c54c94d) that he used to compare Cloud Vision and Tesseract.
 
@@ -86,12 +86,13 @@ OCRopus needs higher resolution images than the other OCR engines we tested -- y
 
 Adobe doesn't provide API access to their OCR tools, but they will batch process documents.
 
+RESULTS TK
+
 **Pricing:**
 
 ## Still to be tested
 
 * [Abbyy Cloud](https://www.ocrsdk.com/)
-* [Adobe Acrobat](https://acrobat.adobe.com/us/en/acrobat/how-to/ocr-software-convert-pdf-to-text.html) -- TED WILL CHECK: DO THEY HAVE A CLOUD SERVICE?
 * [Calamari]() -- TED WILL TEST;
 * Swift OCR -- TED WILL CONFIRM THERE'S NO RUNNER; WE'D NEED TO RUN SOFTWARE? TBD
 * Attention OCR -- TED WILL EXPERIMENT WITH THEIR RUNNER
