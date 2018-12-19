@@ -28,6 +28,7 @@ lol i don't remember at all.  will have to read back through the documentation. 
 
 module OCR
   class OCRopus < Thor
+    include OCR::Utility
 
     desc "[file or directory of files]", ""
     def recognize(path)
@@ -69,17 +70,20 @@ module OCR
     desc "azure [file or directory of files]", "OCR with Azure!"
     option :credentials, aliases: "c"
     def azure(path)
+      require File.join(HEAR, 'ocr', 'azure')
+      
       puts "OCR with Azure!"
     end
 
     desc "tesseract [file or directory of files]", "OCR with Tesseract!"
-    def tesseract(path)
+    def tesseract(maybe_paths)
       puts "OCRing #{path} with Tesseract!"
+      paths = select_images(maybe_paths)
+      Tesseract.analyze(paths)
     end
 
     desc "ocropus [file or directory of files]", "OCR with OCRopus!"
     subcommand "ocropus", OCRopus
-
   end
 end
 
