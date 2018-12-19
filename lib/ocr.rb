@@ -1,5 +1,10 @@
 #! /usr/bin/env ruby
 
+## Eventually this will be a single unified access point for all the things.
+## Split PDFs into individual page images, pre-process them, OCR them. All the
+## things. 
+
+
 require 'fileutils'
 require 'fastimage'
 require 'thor'
@@ -63,7 +68,7 @@ module OCR
     option :credentials, aliases: "c"
     def google(path)
       require File.join(HERE, 'ocr', 'google')
-      
+
       puts "OCR images with Google!"
     end
 
