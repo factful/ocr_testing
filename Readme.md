@@ -1,33 +1,15 @@
 
 # Post Intro
 
-At Factful one of our projects is to build tools that make state of the art machine learning and artificial intelligence accessible to investigative reporters. One thing that means is that we need to spend some time testing the components that already exist so we can prioritize our own efforts. The first step in any kind of document analysis is OCR, or optical character recognition, which allows us to transform a scan or photograph of a letter or filing into searchable, sortable text that we can do more with.
+At Factful one of our projects is to build tools that make state of the art machine learning and artificial intelligence accessible to investigative reporters. One thing that means is that we need to spend some time testing the components that already exist so we can prioritize our own efforts. The first step in any kind of document analysis is OCR, or optical character recognition, which allows us to transform a scan or photograph of a letter or court filing into searchable, sortable text that we can do more with.
 
-[INSERT SOME NOTES FROM JORDAN ABOUT WHERE THE CUTTING EDGE IS HEADED; BIGRAMS? ]
-START NOTES
+The current slate of good document recognition engines use a mix of techniques to read text from images. Most start with a line detection process that identifies lines of text in a document and then breaks them down into words or letter forms. Some use a dictionary to improve results -- when a string is ambiguous, the engine will err on the side of the known word. A dictionary isn't always enough, however, [as Wesley Raabe learned](https://wraabe.wordpress.com/2009/03/07/an-ocr-cliche-into-hisher-anus/) as he was transcribing the 1879 edition of *Uncle Tom's Cabin*.
 
-Scene text recognition is going to change everything, in part because it can't rely on underlying OCR techniques like line detection. Signs aren't always aligned on a straight line.
+The most promising advances in OCR technology are happening in the field scene text recognition. As researchers and programmers look for ways to identify text in the wild (think street signs and package labels) they're developing tools that do a better job of identifying and interpreting text that isn't neatly arranged in rows and paragraphs. Current OCR tools often choke on font changes, inline graphics, and skewed text -- scene recognition has to accommodate all of those hurdles. Scene recognition engines have to be better about spotting letter glyphs.
 
-scene recognition vs. document recognition
+There is also a good deal of promising research on techniques for pre-processing images -- doing things like straightening out warped text, super resolution to boost missing details, bounding text in arbitrary locations and other techniques for accommodating lower resolution text.
 
-most of what we're looking at is document recognition. Often OCR falls down in document engines because document recognition chokes on font changes, inline graphics, and skewed text. So Scene recognition is better about spotting glyphs.
-
-Some use bigrams (and dictionaries?) to improve guesses
-
-tesseract will let you supply a dictionary. how is it using the dictionary?
-
-TED WILL DOUBLE CHECK TO MAKE SURE WE UNDERSTAND HOW TESSERACT USES BIGRAMS AND DICTIONARIES
-
-Interesting advances in pre-processing:
-* automatically de-warping images -- straightening out distorted text
-* super resolution -- boosting missing details based on probability from other pictures.
-* text in arbitrary locations
-* accomodating lower resolution text
-
-Papers worth reading are forthcoming from Jordan.
-
-
-END NOTES
+If you're interested in going deep on the future of OCR, [Scene Text Detection and Recognition: The Deep Learning Era](https://arxiv.org/abs/1811.04256v2) is an excellent survey of current literature on scene recognition. [DocUNet: Document Image Unwarping via a Stacked U-Net](http://openaccess.thecvf.com/content_cvpr_2018/html/Ma_DocUNet_Document_Image_CVPR_2018_paper.html) is a good introduction to scholarly theory on image pre-processing.  
 
 With all that in mind, we identified a few sample documents to run through a handful of OCR systems so we could compare the results. We tested a few proprietary algorithms and a few that are free and open source.
 
