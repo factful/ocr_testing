@@ -1,0 +1,24 @@
+<main>
+	<section id="pages">
+		{#each pages as [name, page]}
+			<article>
+				{#if name === "original"}
+					<img src={page} alt=""/>
+				{:else}
+					<pre>{page}</pre>
+				{/if}
+			</article>
+		{:else}
+			<article>No Pages</article>
+		{/each}
+	</section>
+</main>
+<style>
+	h1 {
+		color: purple;
+	}
+
+	#pages article {
+		display: none;
+	}
+</style>
