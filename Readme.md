@@ -74,6 +74,10 @@ RESULTS TK
 
 **Pricing:**
 
+## AWS Rekognition
+
+[Rekognition] is an image recognition API from Amazon Web Services.  Rekognition is focused on object detection within images, rather than general OCR.  Rekognition is [limited to identifying only 50 words per image](https://docs.aws.amazon.com/rekognition/latest/dg/text-detection.html).  As such it's not particularly useful for OCRing full pages of text.  AWS is due to launch a new service Textract, which is currently in beta release (we do not yet have access to test Textract).
+
 ## Still to be tested
 
 * [Abbyy Cloud](https://www.ocrsdk.com/)
@@ -84,7 +88,6 @@ RESULTS TK
 We initially included [Amazon's Rekognition API](https://aws.amazon.com/rekognition/) on our list, but ultimately decided not to test it. Rekognition is primarily designed to identify text in images of signs and labels, rather than in documents. It's more challenging to implement than the other OCR tools we looked at and we didn't have a need for that level of power.
 
 Amazon Textract is a new service from Amazon. We applied for access to the beta but hadn't received a response by the time we went to press.  
-
 
 # More on what we learned
 
