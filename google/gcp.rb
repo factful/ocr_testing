@@ -21,8 +21,11 @@ vision = Google::Cloud::Vision.new project: project_id
 arg_path = ARGV.first
 
 # Get a list of all of the pngs and/or jpgs to OCR
-File.directory?(arg_path)
-paths = Dir.glob(File.join arg_path, '*.{png,jpg}')
+paths = if File.directory?(arg_path)
+  Dir.glob(File.join arg_path, '*.{png,jpg,JPG,PNG}')
+else
+  [arg_path]
+end
 
 puts "Annotating #{paths.count} images..."
 

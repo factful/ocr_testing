@@ -24,8 +24,10 @@ def ocr(path)
   # the language or set it to "unk".  We'll also have
   # it guess at the orientation, just in case our
   # documents are oriented in a direction other than up.
+  image_file = File.open(path, 'rb')
+  raise ArgumentError, "Azure requires images to be smaller than 4mb." if image_file.size > 4194304
   payload = {
-    data: File.open(path, 'rb'),
+    data: image_file,
     language: 'unk',
     detectOrientation: 'true'
   }
@@ -34,17 +36,22 @@ def ocr(path)
   # script assumes it's an ENV variable.
   headers = {
     'Ocp-Apim-Subscription-Key': ENV['AZURE_KEY'],
-    'Content-Type': 'application/json'
+    'Content-Type': 'multipart/form-data'
   }
   puts "OCRing #{path}"
   # Send the request to Azure
-  response = RestClient.post(url, payload, headers)
+  begin
+    response = RestClient.post(url, payload, headers)
+  rescue StandardError => e
+    puts e.response.body
+    throw e
+  end
   data = JSON.parse(response.body)
 
   dirname = File.dirname(path)
   basename = File.basename(path, ".*")
   # Extract the text out of the response and write it into a file.
-  File.open("#{dirname}/#{basename}.azure.txt", 'w'){ |f| f.puts parse_results(response.body) }
+  File.open("#{dirname}/#{basename}.azure.txt", 'w'){ |f| f.puts parse_results(data) }
   # Write the raw JSON data out into a file.
   File.open("#{dirname}/#{basename}.azure.json", 'w'){ |f| f.puts response.body }
 end
@@ -66,8 +73,11 @@ end
 
 # Read the first
 arg_path = ARGV.first
-File.directory?(arg_path)
-paths = Dir.glob(File.join arg_path, '*.{png,jpg}')
+paths = if File.directory?(arg_path)
+  Dir.glob(File.join arg_path, '*.{png,jpg}')
+else
+  [arg_path]
+end
 
 puts "Annotating #{paths.count} images..."
 
