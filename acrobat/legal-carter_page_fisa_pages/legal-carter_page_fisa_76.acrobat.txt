@@ -1,0 +1,21 @@
+SECll:ET
+
+bl -I
+b3-l
+b7A•l
+bi'E- 1, 2, 3, 6
+
+b! -1
+b3 -l
+b7A- l
+b7B• l, 2, 3, 6
+
+bl -1
+b3- l
+b7A-l
+b7E-l, 2, 3, 6
+
+Sll€R£T
+-10-
+
+

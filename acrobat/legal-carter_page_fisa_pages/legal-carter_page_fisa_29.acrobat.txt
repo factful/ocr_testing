@@ -1,0 +1,40 @@
+TOP SECRETl,INOFORN
+bl -1
+b3-1
+b6-2
+b7A-l
+b7C-2
+b7D -l
+b7E-l ,2, 4,6
+(!}
+~
+
+)
+bl -I
+b3-1
+b6 -2
+b7A-l
+b7C-2
+b7D-I
+b7E- 1, 2, 3, 6
+
+~)
+
+bl -1
+b3-l
+b6 -2
+b7A-l
+b7C-2
+b7D-l
+b7E-1, 2, 3, 6
+
+(~
+
+b3-I
+. b7A-I
+b7E-2, 4
+
+TOP SECRETI/NOFOR.~
+-29-
+
+

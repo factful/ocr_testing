@@ -1,0 +1,31 @@
+SECRET
+
+·
+
+bl -I
+b3-l
+b7A-l
+b7E-l, 2, 3, 6
+
+I
+I
+
+bl -I
+b3-l
+b7A-l
+b7E-l, 2, 3, 6
+
+I
+I
+I
+bl-1
+b3-l
+b7A-l
+b7E-l, 2, 3, 6
+
+I
+
+SECRET
+-8-
+
+

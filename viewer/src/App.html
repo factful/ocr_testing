@@ -1,6 +1,11 @@
 <main>
+	<nav>
+		{#each pages as [name, page] }
+			<div on:click="select(name)">{name}</div>
+		{/each}
+	</nav>
 	<section id="pages">
-		{#each pages as [name, page]}
+		{#each pages as [name, page] }
 			<article>
 				{#if name === "original"}
 					<img src={page} alt=""/>
@@ -22,3 +27,13 @@
 		display: none;
 	}
 </style>
+
+<script>
+	export default {
+		methods: {
+			select(name) {
+				console.log(`Selected ${name}`);
+			}
+		}
+	};
+</script>

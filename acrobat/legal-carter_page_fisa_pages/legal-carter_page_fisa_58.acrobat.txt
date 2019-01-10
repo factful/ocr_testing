@@ -1,0 +1,19 @@
+TOP SECRET//NOFORN
+
+bl -I
+b3-l
+b7A- 1
+b7E -1, 2, 8
+
+(U) ~
+
+b6-2
+b7A-1
+b7C-2
+
+b7E- l, 2
+
+TOP SECRET//NOFORN
+-58-
+
+

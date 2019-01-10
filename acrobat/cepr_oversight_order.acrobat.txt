@@ -1,0 +1,474 @@
+/'CDCJ
+'-LI /I
+
+COMISl6N DEENERGfADEPUERTO
+RICO
+
+COMMONWEALTH OF PUERTO RICO
+PUERTO RICO ENERGY COMMISSION
+
+2
+
+0
+
+IN RE: TEMPORARY OVERSIGHT MEASURES CASE NO.: CEPR-MI-2017-0008
+RELATED TO THE PROCUREMENT AND
+MANAGEMENT OF RESTORATION SERVICES SUBJECT: Order identifying and
+BY PREPA
+implementing temporary oversight
+measures.
+ORDER
+Through this Order, the Puerto Rico Energy Commission (“Commission”) identifies
+and implements a set of measures, requirements and directives aimed at ensuring optimal
+accountability, prudency and reasonability in the procurement and prospective
+management of restoration support services by the Puerto Rico Electric Power Authority
+(“PREPA”) in the wake of Hurricane María.
+These measures are taken to ensure PREPA funds allocated towards the restoration
+and recovery of the Island’s electric grid—whether these funds come ultimately from PREPA
+customers, Commonwealth taxpayers or federal taxpayers—are spent effectively and
+efficiently, producing measurable and quantifiable results. Another objective is to avoid
+wasteful, fraudulent or abusive practices, by holding PREPA and its contractors and subcontractors accountable for the quality and efficiency of their work. The measures taken
+herein are consistent with the Commission’s overall goal and statutory mandate of inducing
+administrative and financial discipline to PREPA’s operations and culture; they are not
+meant to duplicate any efforts by any other state or federal agency, but rather to support
+such efforts.1 Finally, as detailed below, the measures and directives identified herein are
+necessary and essential, in light of both recent and historical examples of doubtful PREPA
+contracting determinations. They are especially necessary in light PREPA’s insistence, in
+testimony and briefs presented in the rate case petition proceeding and in arguments to state
+and federal courts, that the Commission has no power to review and prevent PREPA’s
+spending before it occurs; but rather, once that spending has occurred, must approve rates
+that reflect those costs, even if wasteful or imprudent.2
+The Commission recognizes that the Fiscal Agency and Financial Advisory Authority (“AAFAF” for its Spanish
+acronym) and the Financial Oversight and Management Board for Puerto Rico (“FOMB”) also may conduct some
+type of contract review. Those reviews do not relieve the Commission of its duty under Act 57-2014 to ensure
+that rates are just and reasonable generally, and do not include imprudent costs specifically. The Commission
+is pleased to coordinate with both AFFAF and FOMB to avoid duplication of effort but it must and will carry out
+its independent legal obligation. To that end, the Commission contacted representatives of AFFAF and FOMB
+in May 2017, and FOMB again in November 2017, providing a systematic path to coordination. The Commission
+is awaiting their response but in the meantime must and will use its unique expertise and experience with
+PREPA, demonstrated in numerous prior orders—most importantly the Transition Charge, the Integrated
+Resource Plan and Rate Case—to protect Puerto Rico’s citizens.
+1
+
+See, in general, Part Four of the Commission’s Final Resolution and Order, In Re: Review of Rates of the Puerto
+Rico Electric Power Authority, CEPR-AP-2015-0001, January 10, 2017 at pp. 147-156 (“Resolution and Order
+2
+
+1
+
+1
+
+4
+
+/'CDCJ
+'-LI /I
+
+COMISl6N DEENERGfADEPUERTO
+RICO
+
+2 to0
+In ideal circumstances, the Commission would ask for comments on procedures
+ensure prudent, least-cost contracting, then craft requirements that align with PREPA’s
+practical abilities. The present emergency does not allow for taking extra time with such
+procedures. Accordingly, this Order goes into effect immediately. The Commission does,
+however, invite PREPA to suggest alternative means of accomplishing the same objectives as
+the ones furthered through this Order.
+
+I.
+
+BACKGROUND
+a. PREPA’s History of Imprudent Procurement and Contracting
+
+On October 17, 2017, PREPA signed a contract with Whitefish Energy Holdings, LLC
+(“Whitefish”) for the provision of certain services related to the restoration and recovery of
+PREPA’s electric grid. Less than two weeks later, amid a myriad of controversies, PREPA
+announced its intention to cancel the Whitefish contract on October 29, 2017.3 In the 12-day
+period in between, PREPA incurred at least $20.7 million of costs associated with this
+contract.4 PREPA entered into the Whitefish contract without notifying or seeking prior
+approval from the Commission.
+Whitefish is not the only instance in which PREPA’s actions with regards to the
+procurement, contracting and management of contracted services have shown to lack the
+level of discipline and scrutiny expected from a public utility and required by Act 57-2014.5
+Throughout many of its proceedings, the Commission or its consultants have raised concerns
+regarding the terms and conditions agreed to by PREPA when entering into contracts (and
+whether such terms and conditions are in PREPA’s and ratepayer’s best interest), as well as
+the lack of performance metrics to ensure the quality of the work performed by the
+contractor. Examples include, but are not limited to, the quality of the products prepared by
+PREPA’s contractors Siements PTI and Navigant Consulting, Inc. (submitted as part of
+
+on PREPA’s Rates”) and Part II of the Commission’s Final Resolution addressing PREPA’s Motion for
+Reconsideration, CEPR-AP-2015-0001, March 8, 2017 at pp. 14-34. See also, PREPA’s Verified Motion for
+Reconsideration of Provisions of the Final Resolution and Order, filed January 30, 2017, and PREPA’s Appeal to
+the Puerto Rico Court of Appeals challenging the legality of the Commission’s determinations, Case No.
+KLRA2017-0444, consolidated with Case No. KLRA2017-0446. Of special concern is that PREPA’s attempts at
+freeing itself from required oversight have been supported by both AAFAF and the FOMB. See Notice of
+Removal, Case No. 17-04780 (LTS), Adversary Case No. 17-00256 (Docket Entry No. 279).
+3 While PREPA announced its intention to cancel the Whitefish contract on October 29, 2017, Whitefish would
+continue providing services until certain milestones were completed. As of the date of this Order, Whitefish
+continues to provide services to PREPA.
+
+http://cb.pr/whitefish-no-se-va-hasta-que-entregue-la-linea-de-aguirre-y-aguas-buenas/. This amount is
+expected to increase, given, as noted before, that Whitefish would continue providing services to PREPA until
+the completion of certain milestones.
+4
+
+5
+
+The Puerto Rico Energy Transformation and RELIEF Act, as amended.
+
+2
+
+1
+
+4
+
+/'CDCJ
+'-LI /I
+
+COMISl6N DEENERGfADEPUERTO
+RICO
+
+PREPA’s IRP and Petition for Rate Review),6 PREPA’s maintenance contracts 2with0
+Mitsubishi-Hitachi and Alstom Caribe,7 PREPA’s multiple power purchase agreements with
+renewable energy providers,8 and PREPA’s power purchase agreement with EcoEléctrica.9
+Appendix A to this Order provides detailed insight into these and other examples. As the
+aforementioned list shows, these concerns are not limited to contracts related to a specific
+area of PREPA’s operations, but rather span multiple areas of PREPA’s business.
+While the Commission has not made a finding regarding the prudency of these
+actions, they provide an insight into the type of decisions within PREPA that fuel the
+Commission’s concerns. Particularly, the Commission is concerned that PREPA’s
+management culture, a product of its 70-year long self-regulated monopoly status, is
+unwilling or unable to obtaining the type of concessions from its contractors generally
+sought after by investor-owned utilities worried about their bottom line.
+b. The case for Commission oversight
+In order to be financially and operationally sustainable, a utility’s rates must be
+sufficient to recover all of its costs, provided such costs are deemed by the regulator to be
+prudent. In the traditional setting of an investor-owned utility, a regulator is able to induce
+prudent spending and performance by preventing a utility from recovering through its rates
+costs which are deemed by the regulator to be the result of imprudent actions—those costs
+are thus paid for by the utility’s shareholders, not ratepayers. This after-the-fact review is
+known as cost disallowance. The certainty that imprudent actions will result in lost revenues
+aligns the interests of shareholders and ratepayers, leading to better performance.
+PREPA’s case is different. PREPA is a government-owned, non-profit utility; it has no
+shareholders. Because it has no shareholders, all of its costs must be recovered through its
+rates, which means that ratepayers are entirely responsible for the costs incurred by PREPA.
+Once a cost is incurred, there is no practical choice but to reflect those costs in PREPA’s rates.
+If the Commission were to prevent PREPA from recovering a cost deemed as imprudent,
+PREPA would operate at a deficit, or would have to cut other necessary spending. Neither
+result is consistent with a financially healthy and sustainable utility providing reliable
+service. This certainty of recovery of costs reduces management’s incentives to seek during
+negotiations concessions from contractors that would reduce PREPA’s overall costs and
+exposure to risks and, ultimately, benefit PREPA’s ratepayers. Before-the-fact review by the
+See, in general, the Part IV(A)(3) of the Final Resolution and Order, In Re: Integrated Resource Plan for the
+Puerto Rico Electric Power Authority, Case No. CEPR-AP-2015-0002, September 26, 2016 (“Resolution and
+Order on PREPA’s IRP”) and Parts Two, Three and Four of the Commission’s Resolution and Order on PREPA’s
+Rates.
+6
+
+7
+
+Resolution and Order on PREPA’s Rates at ¶208 and ¶¶211 – 218, respectively.
+
+8
+
+Resolution and Order on PREPA’s IRP, at ¶¶171-188.
+
+9
+
+Resolution and Order on PREPA’s Rates, at ¶152.
+
+3
+
+1
+
+4
+
+/'CDCJ
+'-LI /I
+
+COMISl6N DEENERGfADEPUERTO
+RICO
+
+2 0
+Commission is therefore a necessary action to reduce customers’ exposure to imprudent
+costs.
+
+The Commission recognizes that PREPA’s key personnel are deeply involved in the
+restoration effort, as well as efforts to renegotiate debt and secure federal resources. But it
+is precisely at such times of crisis that discipline in spending can decrease—especially in a
+company whose pre-existing discipline is suboptimal. Lack of discipline and oversight can
+delay restoration services by reducing the effectiveness and efficiency with which
+emergency resources are allocated towards emergency response and restoration efforts.
+The temporary measures and directives identified in Part II of this Order are
+specifically designed to ensure discipline during the current emergency and the period
+immediately after. While the Commission will subject PREPA to rigorous oversight, the
+measures adopted herein are also designed to avoid unnecessary burdens which may delay
+PREPA’s restoration efforts. Requiring PREPA and its contractors to account for their
+activities and costs is a small matter compared to the benefits in terms of certainty,
+transparency and accountability. However, the Commission invites PREPA to suggest
+alternative means of accomplishing the level of accountability that these requirements are
+designed to achieve.
+c. The Commission’s Authority to Require Review
+Act 57-2014 grants the Commission express and unambiguous authority to review
+PREPA’s operations and implement the regulatory actions necessary to “guarantee the
+capacity, reliability, safety, efficiency and reasonability of electricity rate [in] Puerto Rico.”10
+Accordingly, the Commission is empowered to address "all types of operations, processes
+and mandates pertaining to the efficiency of the energy sector of the Island.”11 This broad
+authority is further strengthened by the closing sentence of Section 6.3 of Act 57-2014, which
+states that the Commission shall have all those “implicit and incidental powers that are
+pertinent and necessary” to comply with its mandates. Equally vital is the Commission
+unquestionable authority to “require and gather [from PREPA and certified energy
+companies] any pertinent or necessary information to properly carry out its powers and
+duties.”12
+II.
+
+REQUIREMENT FOR CONTRACT REVIEW
+
+The foregoing factors highlight the need to establish several requirements for
+PREPA’s contracting and spending under such contracts. These requirements will remain in
+effect for a period of six months, beginning on the date issuance of this Order, unless the
+Commission determines otherwise through resolution or order.
+10
+
+See sub-section (c) of Section 6.3 of Act 57-2014.
+
+11
+
+See Statement of Motives of Act 57-2014 at ¶20.
+
+12
+
+See sub-section (l) of Section 6.3 of Act 57-2014.
+
+4
+
+1
+
+4
+
+/'CDCJ
+'-LI /I
+
+COMISl6N DEENERGfADEPUERTO
+RICO
+
+a. Required Contract Provisions
+
+2
+
+0
+
+For any contract or amendment to an existing contract related to the procurement of
+energy, grid services, and fuel13 for an aggregate value of at least $10 million; contracts for
+infrastructure work14 for an aggregate value of at least $1 million; and contracts for
+professional services15 for an aggregate value of at least $250,000, executed by PREPA after
+the issuance of this Order, the Commission ORDERS PREPA to include the following
+provisions:
+(1) A clause stating that the contract will not enter into force unless PREPA has received
+written approval from the Commission or unless five business days have passed after
+PREPA’s submission of the contract to the Commission with no action from the
+Commission. The Commission, on notice to PREPA within the five-day period
+mentioned above, may extend such period for unusually complex contracts, provided
+such period shall never exceed 30 calendar days from the date of submission of the
+contract to the Commission.
+(2) A clause stating that, if the Commission finds, or has reasonable belief, that the work
+being performed is defective, inconsistent with the terms and conditions of the
+contract, with applicable legal and regulatory requirements or with any prior
+Commission order or directive, the Commission may order PREPA to direct a
+contractor to immediately cease the provision of services until the Commission states
+otherwise, or until 15 business days from the date the Commission’s stop-order was
+issued if the Commission fails to take any action within such timeframe. After the
+issuance of a stop-order, and after granting PREPA and the contractor reasonable
+opportunity to be heard, the Commission may determine to authorize continuation of
+services, require corrective measures to be taken, including contract amendments, or
+require the termination of the contract.
+
+The Commission intends the term “energy, grid services, and fuel” to refer to provision of energy to be
+consumed by PREPA or sold by PREPA to customers; to the commitment to make generating capacity available
+when needed (commonly referred to as “capacity services”); to credits associated with production of “green”
+or renewable energy as defined by Act 83-2010; to administration of energy efficiency, demand response, and
+other demand-side management programs; to the services necessary to support the transmission of electric
+power to customers, including but not limited to frequency and voltage regulation, operating and spinning
+reserves, startup-related costs, black start capabilities, and flexible ramping capabilities; to purchases of
+combustible fuels; and to tolling, transportation, or other delivery payments associated with fuel purchases.
+13
+
+14 The Commission intends the term “infrastructure work” to refer to materials purchased for and labor applied
+
+to PREPA’s physical assets. These assets include, but are not limited to, generation, transmission, distribution,
+fuel delivery, information technology, warehousing, and transportation infrastructure and assets.
+The Commission intends the term “professional services” to refer to work for hire that has no impact on
+PREPA’s physical assets, including but not limited to: legal services; advisory services; modeling, potential
+studies, and other analyses; engineering and design work, and others.
+15
+
+5
+
+1
+
+4
+
+/'CDCJ
+'-LI /I
+
+COMISl6N DEENERGfADEPUERTO
+RICO
+
+(3) A clear, detailed scope of the work and activities included in the contract.
+
+2
+
+0
+
+(4) A total budget associated with the described scope, provided that PREPA may seek
+from the Commission a modification of this requirement in extraordinary
+circumstances.
+(5) An estimated spending schedule associated with the described scope and budget,
+with both monthly spending estimates and clear and objective milestones.16 Spending
+schedules must include spending estimates associated with those milestones.
+(6) A schedule of all labor, material, and/or service rates associated with the contract.
+(7) A scope and budget amendment process, which shall include a requirement to
+provide advanced notice, with no less than 30 calendar days in advance, to the
+Commission, of any proposed amendment to the contract scope, budget and amount,
+provided PREPA may seek an exception to the 30-day requirement (but not to the
+advance notice requirement) in extraordinary circumstances.
+(8) Require invoices to be submitted to PREPA on, at least, a monthly basis in electronic
+format. Invoices must contain the amount invoiced under the contract since the last
+invoice and the total amount invoiced since the contract’s execution, as well as a
+description of the work completed and being invoiced and the total amount of
+contract funds remaining after deducting the amount included in the most recent
+invoice.
+(9) A requirement wherein PREPA’s contractor must submit, 10 calendar days in advance
+of a new month, monthly budget updates, with milestones accomplished and
+estimated spending and work to be completed in the upcoming month.
+(10) A clear description of performance guarantees in the contract, including a
+requirement that work performed under the contract will conform to all applicable
+legal and regulatory requirements. Contracts must include a certification from the
+contractor that they are aware of all legal and regulatory requirements and that,
+except for unforeseen or extraordinary circumstances, the contracted budget is
+sufficient to meet these requirements.
+(11) A clear description of risk-sharing provisions, including provisions describing the
+allocation of responsibility for costs between PREPA and PREPA’s contractor in the
+event of error on PREPA’s part, error on the part of PREPA’s counterparty, shared
+error, and the occasion of circumstances beyond the control of PREPA and PREPA’s
+counterparty.
+In the case of contracts for energy, grid services, and fuel, “milestones” means delivery of such energy, grid
+services, or fuel. The requirement for spending estimates associated with delivery of milestones does not apply
+to such contracts. However, the schedule of labor, material, and/or service rates must include a rate for the
+delivery of energy (in MWh), capacity (in MW), fuel (in MMBTU and physical units), or other services (in the
+appropriate units).
+
+16
+
+6
+
+1
+
+4
+
+/'CDCJ
+'-LI /I
+
+COMISl6N DEENERGfADEPUERTO
+RICO
+
+b. Contract and Invoice Oversight
+
+2
+
+0
+
+For any contracts contemplated in Part II.a of this Order, the Commission ORDERS
+the following:
+(1) PREPA shall submit to the Commission contracts for review within one week of
+approval of contracting language by the contracting officer at PREPA. Contract
+submission must include at least: the contract itself; all appendices and attachments;
+a total budget estimate; a spending and milestone schedule; and a schedule of rates
+for labor, materials and services. The PREPA contracting officer who approved the
+contract shall certify to the Commission that the contract complies with the
+requirements established in Part II.a of this Order. None of the materials submitted
+by PREPA may contain any redactions whatsoever; however, PREPA may request
+confidential treatment of those documents, or portions thereof, it deems confidential,
+pursuant to Commission Order CEPR-MI-2016-0009, as amended.
+(2) PREPA shall designate and identify the individual within PREPA responsible for
+reviewing invoices and contractor performance for each contract and whom shall act
+as liaison between PREPA and the Commission on matters related to the contracts
+under their supervision (“PREPA contract manager”). PREPA shall submit the name,
+title, e-mail address, and phone number of this individual to the Commission
+concurrently with each contract.
+(3) PREPA shall notify the Commission within 7 calendar days of any change to the
+identity or contact information of the PREPA contract manager.
+(4) PREPA shall keep and maintain all documents related to each contract, including all
+those documents identified in sub-section (1) above, in a secure Internet server, to
+which server the Commission shall have access immediately upon request.
+(5) Immediately upon receipt of an invoice or budget update, and of approval of such
+invoices, the PREPA contract manager shall upload all relevant documentation to the
+secure Internet server.
+(6) Upon request from the Commission, the PREPA contract manager shall schedule a
+briefing call or meeting, at a mutually convenient time, with PREPA officials and
+contractor representatives familiar with the contract under review.
+(7) Prior to the execution of any proposed amendment to the contract amount or scope
+of work of the services to be performed, the PREPA contract manager shall notify the
+Commission the intent, scope and nature of the proposed amendment no less than 30
+calendar days prior to the intended date of execution of the proposed amendment.
+The proposed amendment shall be deemed to have been approved if the Commission
+fails to make a determination with regards to the proposed amendment within the
+30-day period established before. PREPA may seek an exception to the 30-day
+
+7
+
+1
+
+4
+
+,coo'
+
+'-LI 7i
+
+2
+
+requirement (but not to the advance notice requirement)
+circumstances.
+
+in extraordinary
+
+Be it notified and published.
+
+Angel R. Rivera de la Cruz
+Associate Commissioner
+
+CERTIFICATION
+
+I hereby certify that the majority of the members of the Puerto Rico Energy Commission has
+so agreed on November __Q_,2017 and on this date a copy of this Order was notified by
+electronic mail to the following: j-morales@aeepr.com,
+n-vazquez@aeepr.com,
+caquino@aeepr.com and n-ayala@eepr.com. I also certify that today, November 1"7
+, 2017, I
+have proceeded with the filing of the Order issued by the Puerto Rico Energy Commission
+and I have sent a true and exact copy to the following:
+Autoridad de Energia Electrica de
+Puerto Rico
+Attn.: Ledo. Javier Morales Tafi6n
+Leda. Leda. Nitza D. Vazquez Rodriguez
+Ledo. Carlos M. Aquino Ramos
+P.O. Box 363928
+Correo General
+San Juan, PR 00936-3928
+
+For the record, I sign this in San Juan, Puerto Rico, today, November
+
+Sl, 2017.
+
+ar Cintron Alvarado
+Clerk
+
+8
+
+0
+
+1
+
+4
+
+
