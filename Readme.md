@@ -1,7 +1,9 @@
 
 # Post Intro
 
-At Factful one of our projects is to build tools that make state of the art machine learning and artificial intelligence accessible to investigative reporters. One thing that means is that we need to spend some time testing the components that already exist so we can prioritize our own efforts. The first step in any kind of document analysis is OCR, or optical character recognition, which allows us to transform a scan or photograph of a letter or court filing into searchable, sortable text that we can do more with.
+At Factful one of our projects is to build tools that make state of the art machine learning and artificial intelligence accessible to investigative reporters. One thing that means is that we need to spend some time testing the components that already exist so we can prioritize our own efforts.
+
+OCR, or optical character recognition, which allows us to transform a scan or photograph of a letter or court filing into searchable, sortable text that we can do more with.
 
 The current slate of good document recognition OCR engines use a mix of techniques to read text from images, but they are all optimized for documents. They assume that material fits on a rectangular page. Most start with a line detection process that identifies lines of text in a document and then breaks them down into words or letter forms. Some use a dictionary to improve results -- when a string is ambiguous, the engine will err on the side of the known word. A dictionary isn't always enough, however, [as Wesley Raabe learned](https://wraabe.wordpress.com/2009/03/07/an-ocr-cliche-into-hisher-anus/) as he was transcribing the 1879 edition of *Uncle Tom's Cabin*.
 
@@ -75,7 +77,7 @@ RESULTS TK
 **Pricing:**
 
 ## Amazon Options
-We initially included [Amazon's Rekognition API](https://aws.amazon.com/rekognition/) on our list, but ultimately decided not to test it. Rekognition is primarily designed to identify text in images of signs and labels, rather than in documents and can only pick out [50 words per image](https://docs.aws.amazon.com/rekognition/latest/dg/text-detection.html) so it isn't a great option for full pages of text. 
+We initially included [Amazon's Rekognition API](https://aws.amazon.com/rekognition/) on our list, but ultimately decided not to test it. Rekognition is primarily designed to identify text in images of signs and labels, rather than in documents and can only pick out [50 words per image](https://docs.aws.amazon.com/rekognition/latest/dg/text-detection.html) so it isn't a great option for full pages of text.
 
 Amazon Textract is a new service from Amazon. We applied for access to the beta but hadn't received a response by the time we went to press.  
 
