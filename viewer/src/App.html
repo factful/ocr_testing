@@ -6,7 +6,7 @@
 	</nav>
 	<section id="pages">
 		{#each pages as [name, page] }
-			<article>
+			<article class:active="activePage == name">
 				{#if name === "original"}
 					<img src={page} alt=""/>
 				{:else}
@@ -23,8 +23,17 @@
 		color: purple;
 	}
 
+	nav div {
+		display: inline-block;
+		margin: 4px;
+	}
+
 	#pages article {
 		display: none;
+	}
+
+	#pages article.active {
+		display: block;
 	}
 </style>
 
@@ -33,6 +42,7 @@
 		methods: {
 			select(name) {
 				console.log(`Selected ${name}`);
+				this.set({activePage: name});
 			}
 		}
 	};

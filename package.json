@@ -1,0 +1,22 @@
+{
+  "name": "diff-viewer",
+  "version": "1.0.0",
+  "description": "a diff viewer for OCR output",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/factful/ocr_testing.git"
+  },
+  "author": "Ted Han <ted@factful.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/factful/ocr_testing/issues"
+  },
+  "homepage": "https://github.com/factful/ocr_testing#readme"
+}
