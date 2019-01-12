@@ -6,8 +6,7 @@ let entries = Object.entries(contents).map( (row)=>{ return row; } )
 const app = new App({
 	target: document.body,
 	data: {
-		count: 0,
-		name: 'world',
+		image: entries.shift(),
 		pages: entries,
 		activePage: entries[0][0]
 	},

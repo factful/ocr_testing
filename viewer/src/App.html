@@ -1,21 +1,22 @@
 <main>
-	<nav>
-		{#each pages as [name, page] }
-			<div on:click="select(name)">{name}</div>
-		{/each}
-	</nav>
-	<section id="pages">
-		{#each pages as [name, page] }
-			<article class:active="activePage == name">
-				{#if name === "original"}
-					<img src={page} alt=""/>
-				{:else}
+	<section id="image">
+			<img src={image[1]} alt=""/>
+	</section>
+	<section id="text">
+		<nav>
+			{#each pages as [name, page] }
+				<div class:active="activePage == name" on:click="select(name)">{name}</div>
+			{/each}
+		</nav>
+		<div id="pages">
+			{#each pages as [name, page] }
+				<article class:active="activePage == name">
 					<pre>{page}</pre>
-				{/if}
-			</article>
-		{:else}
-			<article>No Pages</article>
-		{/each}
+				</article>
+			{:else}
+				<article>No Pages</article>
+			{/each}
+			</div>
 	</section>
 </main>
 <style>
@@ -23,9 +24,28 @@
 		color: purple;
 	}
 
+	main {
+		display: flex;
+	}
+
+	main section#image {
+		width: 50%;
+	}
+
+	#image img { 
+		width: 94%;
+		padding: 2%;
+	}
+
+	#text { width: 50%; }
+
 	nav div {
 		display: inline-block;
-		margin: 4px;
+		padding: 4px;
+	}
+
+	nav div.active {
+		background-color: #eee;
 	}
 
 	#pages article {
