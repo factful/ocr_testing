@@ -16,7 +16,7 @@ ITEM                  PRICE  #   TOTAL
 ORANGE SLICE        $ 1.40  1 $   1.40
 CHEEZ-IT            $ 2.72  1 $   2.72
 TOWN HOUSE CRACKERS $ 3.47  1 $   3.47
-* CHEWY CHIPS AHOY    $ 3.40  1 $   3.04
+CHEWY CHIPS AHOY    $ 3.40  1 $   3.04
 RAMEN SOUP          $ 0.35 15 $   5.25
 BEEFSTICK           $ 0.31  6 $   1.86
 NACHO CHEESE DORITO $ 0.45  3 $   1.35
