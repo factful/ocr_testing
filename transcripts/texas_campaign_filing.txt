@@ -34,7 +34,7 @@ Self
 Date
 09/10/2018
 
-Full name of contributor  [ ] out-of-state PAC (ID
+Full name of contributor  [ ] out-of-state PAC (ID#:__________________)
 Law Office of Mitchell R Nelson PLLC
 
 Contributor address; City: State; Zip Code
@@ -50,7 +50,7 @@ Employer (See Instructions)
 Date
 09/27/2018
 
-Full name of contributor  [ ] out-of-state PAC (ID
+Full name of contributor  [ ] out-of-state PAC (ID#:__________________)
 Law Offices of Matthew Dexter PLLC
 
 Contributor address; City: State; Zip Code
@@ -66,7 +66,7 @@ Employer (See Instructions)
 Date
 09/17/2018
 
-Full name of contributor  [ ] out-of-state PAC (ID
+Full name of contributor  [ ] out-of-state PAC (ID#:__________________)
 McAlister, Sean
 
 Amount of Contribution ($)
@@ -84,7 +84,7 @@ Self
 Date
 09/06/2018
 
-Full name of contributor  [ ] out-of-state PAC (ID
+Full name of contributor  [ ] out-of-state PAC (ID#:__________________)
 McBride, Ralph
 
 Amount of Contribution ($)
