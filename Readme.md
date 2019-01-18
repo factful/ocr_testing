@@ -1,3 +1,16 @@
+Notes:
+* Lindsay will check w/Ryan on embedding
+* Intro needs more. Sections like:
+* * Focus some grounding methods in the intro: this is dense but people need a compass. What are they about to hear and why should they pay attention. Blow out the first graph.
+* * Testing Method
+* *
+
+Scaffolding the viewer
+Limit the embeds to the end and capture key takeaways in screenshots/ images.
+
+
+
+
 Text was moved to Google Drive for easier collaboration with editors.
 
 https://docs.google.com/document/d/1dIocW88gOFAAVihjHxU1seqQrYskCvlMvmbQ2KBpuPs/edit#
