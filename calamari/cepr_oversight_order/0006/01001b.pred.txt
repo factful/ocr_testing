@@ -1,0 +1,1 @@
+(10) A clear description of performance guarantees in the contract, including a

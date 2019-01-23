@@ -1,0 +1,1 @@
+invoice and the total amount invoiced since the contract's execution, as well as a
