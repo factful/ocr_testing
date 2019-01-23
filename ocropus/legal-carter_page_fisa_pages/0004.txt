@@ -1,26 +1,26 @@
-be 2
-b 1
-b3 1
-b'A 1
-SSSOOY
-b1 1
-b7A 1
-bE i 2
-b6 .
-b7E 12
-'(SONK)
-bA 1
-ec :
 saxs) Acormmgwwm=roveaN+Psge4ungimrew
-b'
-b'E 1 2
-b1 1
-b7 1
+'(SONK)
+SSSOOY
 12
-b'E 2
-E*G 2
+b7 1
 HE 1 2
+h1
+b 1
+be 2
+b74 1
+E*G 2
+b'E 1 2
+b6 .
+b7A 1
+ec :
+b'E 2
+b1 1
 b3
 b6 .
-h1
-b74 1
+bA 1
+b'
+b7E 12
+b1 1
+b3 1
+b'A 1
+bE i 2
