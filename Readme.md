@@ -9,52 +9,16 @@ Scaffolding the viewer
 Limit the embeds to the end and capture key takeaways in screenshots/ images.
 
 
+# Welcome
 
+This repository contains the scripts and outputs from our OCR comparison tests.
 
-Text was moved to Google Drive for easier collaboration with editors.
+We identified a few sample documents to run through OCR systems so we could compare the results. The documents we used in our final write up are these:
 
-https://docs.google.com/document/d/1dIocW88gOFAAVihjHxU1seqQrYskCvlMvmbQ2KBpuPs/edit#
-# Working with OCR'd documents
++ A receipt -- This receipt from the Riker's commissary was included in States of Incarceration, a collaborative storytelling project and traveling exhibition about incarceration in America.
++ A heavily redacted document -- Carter Page's FISA warrant is a legal filing with a lot of redacted portions, just the kind of exasperating thing reporters deal with all the time.
++ Something historical -- Executive Order 9066 authorized the internment of Japanese Americans in 1942. The scanned image available in the national archives is fairly high quality but it is still an old, typewritten document.
++ A form -- This Texas campaign finance report, from a Texas Tribune story about abuses in the juvenile justice system has very clean text but the formatting is important to understanding the document.
++ Something wrinkled --  in early 2014 a group of divers retrieved hundreds of pages of documents from a lake at Ukrainian President Viktor Yanukovych's vast country estate. The former president or his staff had dumped the records there in the hopes of destroying them, but many pages were still at least somewhat legible. Reporters laid them out to dry and began the process of transcribing the waterlogged papers. We selected a page that is more or less readable to the human eye but definitely warped with water damage.
 
-
-## Types of tasks
-
-- search indexing
-- transcription
-- layout analysis
-- information extraction
-- document classification
-
-OCR tools vary in quality and robustness.  Whether they will do a good job depend on the task you'd like to accomplish.  Literal transcription of text, where exact accuracy is important, may be hard to accomplish automatically without additional review by a person.
-
-On the other hand, searching for documents keywords may not require exact accuracy to surface documents.  For example, a name may be mentioned multiple times in a document, and so long as it's recognized correctly _once_, a search query will find it.
-
-Sometimes
-
-### Searching Text & what to be aware of
-
-- OCR engines are far from perfect.
-- basic literal search isn't going to produce perfect results.
-- even regular expressions aren't going to be great (word breaks, recognition errors)
-- What kinds of errors do OCR engines produce?
-
-### Layout analysis
-
-- Position data can help, and sometimes it's necessary
-- OCR systems do some basic layout analysis.
-- What if you need to do more analysis?
-
-# Goofy things
-
-- [Darius Kazemi's Reverse OCR](http://reverseocr.tumblr.com/)
-- [Tesseract.js](https://github.com/naptha/tesseract.js)
-- Skip. [Unfortunate OCR in historic books](https://wraabe.wordpress.com/2009/03/07/an-ocr-cliche-into-hisher-anus/)
--
-
-## SKIP Pricing
-
-SKIP Most cloud API services charge per thousand pages after some number of free pages per month. As of this writing, ... TK.
-
-## More
-
-The most effective [CHECK] OCR tools use a combination of shape recognition and context to make the best guess about what any one letter glyph represents. That means that a tool that does a great job on English language text might struggle with other languages that use the same alphabet but don't tend to follow the same spelling patterns. (HI! IS THIS ACTUALLY ACCURATE? also what is a good example of a bigram that occurs a lot in other languages but not english? like `aa` or something?) and an OCR tool that is great on the latin alphabet doesn't necessarily know the first thing about Cyrillic or Kanji so there's definitely room to expand this testing to include more languages.
+We also tested the OCR engines against a handful of alternative documents, for no particular reason. (more TK)
