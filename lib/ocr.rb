@@ -12,6 +12,7 @@ require 'rest-client'
 
 HERE = File.dirname(__FILE__)
 require File.join(HERE, "ocr", "utility")
+require File.join(HERE, "ocr", "ocropus")
 
 =begin
 
@@ -32,28 +33,9 @@ lol i don't remember at all.  will have to read back through the documentation. 
 =end
 
 module OCR
-  class OCRopus < Thor
-    include OCR::Utility
-
-    desc "[file or directory of files]", ""
-    def recognize(path)
-      puts "OCR #{path} with ocropus!"
-    end
-
-    desc "binarize [file or directory of files]", ""
-    def binarize(path)
-      puts "Binarize #{path} with ocropus"
-    end
-
-    desc "segment [file or directory of files]", ""
-    def segment(path)
-      puts "Split images in #{path} with ocropus"
-    end
-
-    default_task :recognize
-  end
-
   class OCR < Thor
+    include Utility
+
     desc "rasterize [pdf]", "turn a PDF into images (pngs by default)"
     option :output, aliases: "o"
     option :resolution, aliases: "r"
@@ -64,12 +46,17 @@ module OCR
       `#{cmd}`
     end
 
-    desc "google [file or directory of files]", "OCR images with Google"
+    desc "google path/to/credentials [file or directory of files]", "OCR images with Google"
     option :credentials, aliases: "c"
-    def google(path)
+    def google(credentials, maybe_paths)
+      ENV["GOOGLE_APPLICATION_CREDENTIALS"]=credentials
+      require "google/cloud/vision"
       require File.join(HERE, 'ocr', 'google')
-
       puts "OCR images with Google!"
+      paths = select_images(maybe_paths)
+      google = Google.new
+      google.analyze(paths)
+      google.write_results
     end
 
     desc "azure [file or directory of files]", "OCR with Azure!"
@@ -82,11 +69,13 @@ module OCR
 
     desc "tesseract [file or directory of files]", "OCR with Tesseract!"
     def tesseract(maybe_paths)
-      puts "OCRing #{path} with Tesseract!"
+      require File.join(HERE, "ocr", "tesseract")
+      puts "OCRing `#{maybe_paths}` with Tesseract!"
       paths = select_images(maybe_paths)
       Tesseract.analyze(paths)
     end
 
+    # see ocr/ocropus.rb
     desc "ocropus [file or directory of files]", "OCR with OCRopus!"
     subcommand "ocropus", OCRopus
   end
@@ -96,13 +85,17 @@ OCR::OCR.start(ARGV)
 
 =begin
 
-ocr.rb google            path_to_files (options: output, credentials)
+ocr.rb abbyy             path_to_files (options: output, credentials)
+ocr.rb acrobat           path_to_files # this one makes less sense
+ocr.rb aws               path_to_files (options: output, credentials)
 ocr.rb azure             path_to_files (options: output, credentials)
-ocr.rb tesseract         path_to_files (options: output, model, hocr, export to pdf)
-ocr.rb rasterize         path_to_files (options: output, resolution)
+ocr.rb calamari          path_to_files (options: output, credentials)
+ocr.rb google            path_to_files (options: output, credentials)
 ocr.rb ocropus           path_to_files (options: output, model)
 ocr.rb ocropus binarize  path_to_files (options: ????)
 ocr.rb ocropus segment   path_to_files (options: ????)
 ocr.rb ocropus recognize path_to_files (options: ????)
+ocr.rb tesseract         path_to_files (options: output, model, hocr, export to pdf)
+ocr.rb rasterize         path_to_files (options: output, resolution)
 
 =end

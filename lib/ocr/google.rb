@@ -9,47 +9,36 @@ module OCR
   class Google
     def initialize
       # Instantiates a client
-      @vision = Google::Cloud::Vision.new
+      @annotator = ::Google::Cloud::Vision::ImageAnnotator.new
     end
     
     def analyze(paths)
-      # create a bucket that we're going to push results into.
-      results = []
-      # grab 16 images at a time into a batch (google will take up to 16 in a single batch)
-      verify_paths(paths).each_slice(16) do |image_paths|
-        # open up the images,
-        images = image_paths.map{ |f| @vision.image(f) }
-        # and send the batch to Google for OCR.
-        batch = @vision.annotate do |annotator| 
-          images.each do |i| 
-            annotator.annotate(i, text:true)
-          end
-        end
-        # then stick this batch of results in our bucket
-        results.push *batch
+      responses = paths.map do |path|
+        response = @annotator.text_detection( image: path )
+        [path, response.responses]
       end
-      # Zip the results up with the paths (they should both be in the same order)
-      @annotations = Hash[paths.zip(results)]
+      @annotations = Hash[responses]
     end
 
     def write_results
       # grab the path to the original file name, and the data extracted for it
       # then write just the text out to a file (with the same name as the image)
       # and then dump all of the data (including position information) into another file.
-      @annotations.each do |path, data|
+      @annotations.each do |path, data| 
         dirname = File.dirname(path)
         basename = File.basename(path, ".*")
-        File.open("#{dirname}/#{basename}.google.txt", 'w'){ |f| f.puts data.text }
-        File.open("#{dirname}/#{basename}.google.json", 'w'){ |f| f.puts data.to_h.to_json }
+        text_path = "#{dirname}/#{basename}.google.txt"
+        File.open(text_path, 'w') do |f| 
+          f.puts data.map{ |a| a.full_text_annotation.text }.flatten.join("\n")
+          puts "Saved text to #{text_path}"
+        end
+        json_path = "#{dirname}/#{basename}.google.json"
+        File.open(json_path, 'w') do |f| 
+          collector = data.map{ |a| a.text_annotations.map{|e| e.to_h } }
+          f.puts collector.to_json
+          puts "Saved json to #{json_path}"
+        end
       end
-    end
-
-    def verify_paths(paths)
-      found, missing = paths.partition do |path| 
-        File.exist? path
-      end
-      puts "Skipping missing paths: \n#{ missing.join("\n") }\n"
-      found
     end
   end
 end
