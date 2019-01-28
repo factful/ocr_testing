@@ -47,7 +47,6 @@ module OCR
     end
 
     desc "google path/to/credentials [file or directory of files]", "OCR images with Google"
-    option :credentials, aliases: "c"
     def google(credentials, maybe_paths)
       ENV["GOOGLE_APPLICATION_CREDENTIALS"]=credentials
       require "google/cloud/vision"
@@ -60,11 +59,13 @@ module OCR
     end
 
     desc "azure [file or directory of files]", "OCR with Azure!"
-    option :credentials, aliases: "c"
-    def azure(path)
-      require File.join(HEAR, 'ocr', 'azure')
-      
+    def azure(credentials, maybe_paths)
+      require File.join(HERE, 'ocr', 'azure')
+      paths = select_images(maybe_paths)
       puts "OCR with Azure!"
+      azure = Azure.new(credentials)
+      azure.analyze(paths)
+      azure.write_results
     end
 
     desc "tesseract [file or directory of files]", "OCR with Tesseract!"
