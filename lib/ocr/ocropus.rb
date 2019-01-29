@@ -1,19 +1,3 @@
-=begin
-  This will need to:
-
-    - find the images in question
-    - binarize them
-    - segment them
-    - find the location of the segmented images
-    - recognize the segmented images
-    - stitch together the recognized output
-
-  Requirements:
-    - where do the ocropus commands/binaries live?
-    - where does the ocropus model data live?
-
-=end
-
 require File.join(File.dirname(__FILE__), "utility")
 
 module OCR
