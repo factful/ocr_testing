@@ -92,7 +92,7 @@ Ubuntu/Debian:
 
 #### Calamari
 
-Calamari, because it solely recognizes single line images, is dependent on OCRopus's tools for improving contrast, deskewing and splitting images into pieces.  What's unfortunate about this arrangement is that Calamari requires python 3.x, and OCRopus requires python 2.x.
+Calamari, because it solely recognizes single line images, is dependent on OCRopus's tools for improving contrast, deskewing and splitting images into pieces.  What's unfortunate about this arrangement is that Calamari requires python 3.x, and OCRopus requires python 2.x.  In hindsight, we could have also used `kraken` another OCR library forked from OCRopus
 
 There are a variety of tools that you can use to manage multiple installations of python.  For our purposes we relied on [`pyenv`][pyenv] and [`virtualenv`][virtualenv].  (If you're using `pyenv` please also note [the additional installation instructions](https://github.com/pyenv/pyenv/wiki#suggested-build-environment))
 
@@ -123,10 +123,18 @@ python setup.py install
 - requires downloading [code from Github](https://github.com/tmbdev/ocropy)
 - requires downloading models
 
-OCRopus 2 requires python 2.x, 
+```
+mkdir -p venv
+pyenv install 2.7
+virtualenv -p ~/.pyenv/versions/2.7/bin/python venv/ocropus
+``` 
 
 ```
-cd ocropy
+# activate the ocropus virtualenv
+source venv/ocropus/bin/activate
+# find the ocropus source directory
+cd ../ocropy
+# and install the dependencies
 pip install -r requirements.txt
 python setup.py install
 ```
