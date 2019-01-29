@@ -4,6 +4,11 @@ module OCR
   class OCRopus < Thor
     include OCR::Utility
 
+    # This app assumes you have virtualenv installed
+    # and that there's a 2.7 virtualenv in ROOT/venv/ocropus
+    # which has ocropus and it's dependencies installed into it.
+    VENV_DEFAULT = File.join(File.dirname(__FILE__), "..", "..", "venv", "ocropus", "bin", "activate")
+
     desc "[file or directory of files]", ""
     def process(*maybe_paths)
       puts "OCR #{maybe_paths} with ocropus!"
@@ -26,9 +31,10 @@ module OCR
       paths = select_images(maybe_paths)
       paths.map do |path|
         executable = 'ocropus-nlbin'
-
         cmd = "#{executable} -n #{path}"
-        puts `#{cmd}`
+
+        venv = VENV_DEFAULT
+        puts `source #{venv}; #{cmd}`
         extname = File.extname(path)
         basename = File.basename(path,extname)
         dirname = File.dirname(path)
@@ -44,7 +50,8 @@ module OCR
       paths.map do |path|
         executable = 'ocropus-gpageseg'
         cmd = "#{executable} -n --minscale 5 #{path}"
-        puts `#{cmd}`
+        venv = VENV_DEFAULT
+        puts `source #{venv}; #{cmd}`
         basename = File.basename(path, ".bin.png")
         dirname = File.dirname(path)
         File.join(dirname, basename)
@@ -57,17 +64,21 @@ module OCR
       model_path = File.join(File.dirname(__FILE__), "..", "..", "..", "ocropy", "models", "en-default.pyrnn.gz")
 
       processor_count = 4
+      parallelism = ""; # "-Q #{processor_count / 2}"
       executable = "ocropus-rpred"
-      cmd = "#{executable} -n -Q #{processor_count / 2} -m #{model_path} #{paths.join(' ')}"
-      output = `#{cmd}`
-      puts output
+      cmd = "#{executable} -n #{parallelism} -m #{model_path} #{paths.join(' ')}"
+      venv = VENV_DEFAULT
+      puts output = `source #{venv}; #{cmd}`
+      output
     end
 
-    def compile_text(dirpath)
-      paths = Dir.glob(File.join(dirpath, "*.txt")).sort
-      text_path = "#{dirpath}.txt"
-      File.open(text_path, "w") do |file|
-        paths.each{ |line| file.puts File.read(line) }
+    no_commands do
+      def compile_text(dirpath)
+        paths = Dir.glob(File.join(dirpath, "*.txt")).sort # maybe this should be configurable
+        text_path = "#{dirpath}.txt"
+        File.open(text_path, "w") do |file|
+          paths.each{ |line| file.puts File.read(line) }
+        end
       end
     end
 

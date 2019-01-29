@@ -13,6 +13,7 @@ require 'rest-client'
 HERE = File.dirname(__FILE__)
 require File.join(HERE, "ocr", "utility")
 require File.join(HERE, "ocr", "ocropus")
+require File.join(HERE, "ocr", "calamari")
 
 =begin
 
@@ -81,11 +82,7 @@ module OCR
     subcommand "ocropus", OCRopus
 
     desc "calamari [file or directory of files]", "OCR with Calamari"
-    def calamari(maybe_paths)
-      # how should i handle the venv stuff?  idk?
-      # do i need to first run through the binarization and splitting?
-      # herp derp
-    end
+    subcommand "calamari", Calamari
 
     desc "abbyy [file or directory of files]", "OCR with Abbyy Cloud"
     def abbyy(maybe_paths, credentials)
