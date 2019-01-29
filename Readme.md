@@ -29,16 +29,16 @@ The second, `whitefish_energy_vs_commonwealth_puerto_rico` is the full text of a
 * [Puerto Rico moves to cancel contract with Whitefish Energy to repair electric grid](https://www.washingtonpost.com/business/economy/puerto-rico-governor-says-contract-to-whitefish-company-should-be-canceled/2017/10/29/e5336cda-bcb8-11e7-97d9-bdab5a0ab381_story.html?utm_term=.685e693e654d), *The Washington Post*, Oct 29, 2017; and
 * [Puerto Rico Grid Contractor Dispute Devolves Into Litigation](https://www.wsj.com/articles/puerto-rico-grid-contractor-dispute-devolves-into-litigation-1511396684), *The Wall Street Journal*, Nov 22, 2017
 
-# Usage
+# Using this Repository
 
-The scripts in this repository were used to generate the results found here.  These scripts can be repurposed to OCR other documents.  Installation instructions for the individual OCR tools follow below.
+The `/lib/` directory includes the scripts that we used to test each OCR client. Each tool requires some setup, but once you've got a tool installed, you can invoke it with:
+
 
 `ruby ./lib/ocr.rb [command]`
 
-examples: 
+For example once you have installed Tesseract, `ruby ./lib/ocr.rb tesseract documents` will use Tesseract to OCR all the images in the "documents" directory.
 
-- `ruby ./lib/ocr.rb tesseract documents # ocr all the images in the documents directory`
-- `ruby ./lib/ocr.rb google google_cloud_vision/credentials.js documents/historical-executive_order_9066-japanese_internment.jpg`
+Once you have set up Google Cloud services and stored your credentials, `ruby ./lib/ocr.rb google google_cloud_vision/credentials.json documents/historical-executive_order_9066-japanese_internment.jpg` will use Google Cloud Vision to OCR a single image.
 
 ## Installation
 
@@ -54,9 +54,11 @@ See the example in [`google_cloud_vision/credentials.sample.json`](https://githu
 
 See the example in [`azure/credentials.sample.json`](https://github.com/factful/ocr_testing/blob/master/azure/credentials.sample.json)
 
-### Command line tools
+#### Abbyy
 
-The three command line tools we tested vary in complexity to install and use.  
+Abbyy provides a python script. 
+
+### Command Line Tools
 
 #### Tesseract
 
