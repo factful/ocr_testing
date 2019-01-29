@@ -79,6 +79,18 @@ module OCR
     # see ocr/ocropus.rb
     desc "ocropus [file or directory of files]", "OCR with OCRopus!"
     subcommand "ocropus", OCRopus
+
+    desc "calamari [file or directory of files]", "OCR with Calamari"
+    def calamari(maybe_paths)
+      # how should i handle the venv stuff?  idk?
+      # do i need to first run through the binarization and splitting?
+      # herp derp
+    end
+
+    desc "abbyy [file or directory of files]", "OCR with Abbyy Cloud"
+    def abbyy(maybe_paths, credentials)
+      
+    end
   end
 end
 
