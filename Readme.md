@@ -90,6 +90,33 @@ Ubuntu/Debian:
 
 `apt install tesseract tesseract-ocr-*`
 
+#### Calamari
+
+Calamari, because it solely recognizes single line images, is dependent on OCRopus's tools for improving contrast, deskewing and splitting images into pieces.  What's unfortunate about this arrangement is that Calamari requires python 3.x, and OCRopus requires python 2.x.
+
+There are a variety of tools that you can use to manage multiple installations of python.  For our purposes we relied on [`pyenv`][pyenv] and [`virtualenv`][virtualenv].  (If you're using `pyenv` please also note [the additional installation instructions](https://github.com/pyenv/pyenv/wiki#suggested-build-environment))
+
+We installed python 3.6 (because tensorflow has [some issues installing on python 3.7](https://github.com/tensorflow/tensorflow/issues/17022)) with `pyenv`, and then used `virtualenv` to create a space to install calamari and it's dependencies.
+
+```
+# from the root of this directory first install python 3.6 and create a virtual env.
+mkdir -p venv
+pyenv install 3.6.8
+virtualenv -p ~/.pyenv/versions/3.6.8/bin/python venv/calamari
+```
+
+```
+# activate the virtualenv
+source venv/calamari/bin/activate
+# find the calamari source directory
+cd ../calamari
+# and install the dependencies and library.
+pip install -r requirements.txt
+python setup.py install
+```
+
+`calamari-predict` should now be available on the commandline.
+
 #### OCRopus
 
 - requires python 2.7
@@ -106,23 +133,6 @@ python setup.py install
 
 `ocropus-rpred` should now be available on the commandline.
 
-#### Calamari
-
-Calamari, because it solely recognizes single lines, is dependent on OCRopus's tools for improving contrast, deskewing and splitting images into pieces.  What's unfortunate about this arrangement is that Calamari requires python 3.x, and OCRopus requires python 2.x.
-
-There are a variety of tools that you can use to manage multiple installations of python.  For our purposes we relied on [`pyenv`][pyenv] and [`virtualenv`][virtualenv].  (If you're using `pyenv` please also note [the additional installation instructions](https://github.com/pyenv/pyenv/wiki#suggested-build-environment))
-
-- requires everything OCRopus requires
-- also requires python3
-- requires tensorflow
-
-```
-cd calamari
-pip install -r requirements.txt
-python setup.py install
-```
-
-`calamari-predict` should now be available on the commandline.
 
 [pyenv]: https://github.com/pyenv/pyenv
 [virtualenv]: https://virtualenv.pypa.io/en/latest/
