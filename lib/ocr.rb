@@ -1,9 +1,7 @@
 #! /usr/bin/env ruby
 
 ## Eventually this will be a single unified access point for all the things.
-## Split PDFs into individual page images, pre-process them, OCR them. All the
-## things. 
-
+## Split PDFs into individual page images, pre-process them, OCR them. 
 
 require 'fileutils'
 require 'fastimage'
@@ -86,7 +84,7 @@ module OCR
 
     desc "abbyy [file or directory of files]", "OCR with Abbyy Cloud"
     def abbyy(maybe_paths, credentials)
-      
+
     end
   end
 end
