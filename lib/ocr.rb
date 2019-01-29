@@ -37,7 +37,7 @@ module OCR
   class OCR < Thor
     include Utility
 
-    desc "rasterize [pdf]", "turn a PDF into images (pngs by default)"
+    desc "rasterize [pdf]", "turn a PDF into a directory of images (pngs by default)"
     option :output, aliases: "o"
     option :resolution, aliases: "r"
     def rasterize(pdf)
@@ -59,7 +59,7 @@ module OCR
       google.write_results
     end
 
-    desc "azure [file or directory of files]", "OCR with Azure!"
+    desc "azure path/to/credentials [file or directory of files]", "OCR images with Azure!"
     def azure(credentials, maybe_paths)
       require File.join(HERE, 'ocr', 'azure')
       paths = select_images(maybe_paths)
@@ -69,7 +69,7 @@ module OCR
       azure.write_results
     end
 
-    desc "tesseract [file or directory of files]", "OCR with Tesseract!"
+    desc "tesseract [file or directory of files]", "OCR images with Tesseract!"
     def tesseract(maybe_paths)
       require File.join(HERE, "ocr", "tesseract")
       puts "OCRing `#{maybe_paths}` with Tesseract!"
@@ -78,13 +78,13 @@ module OCR
     end
 
     # see ocr/ocropus.rb
-    desc "ocropus [file or directory of files]", "OCR with OCRopus!"
+    desc "ocropus [file or directory of files]", "OCR images with OCRopus!"
     subcommand "ocropus", OCRopus
 
-    desc "calamari [file or directory of files]", "OCR with Calamari"
+    desc "calamari [file or directory of files]", "OCR images with Calamari"
     subcommand "calamari", Calamari
 
-    desc "abbyy [file or directory of files]", "OCR with Abbyy Cloud"
+    desc "abbyy [file or directory of files]", "OCR images with Abbyy Cloud"
     def abbyy(maybe_paths, credentials)
       
     end
