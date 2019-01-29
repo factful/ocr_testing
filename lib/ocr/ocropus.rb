@@ -39,23 +39,9 @@ module OCR
     def binarize(*maybe_paths)
       puts "Binarize #{maybe_paths} with ocropus"
       
-      #if (dest = options[:destination])
-      #  unless File.exists? dest
-      #    raise ArgumentError, "Can't save files to `#{dest}` (path doesn't exist)"
-      #  end
-      #  unless File.directory? dest
-      #    raise ArgumentError, "Can't save files to `#{dest}` (path isn't a directory)"
-      #  end
-      #end
       paths = select_images(maybe_paths)
       paths.map do |path|
         executable = 'ocropus-nlbin'
-        # ugh, just make a directory per page.
-        # identifying what kind of bash glob to try to pass in
-        # here is way too much of a mess.
-        #basename = File.basename(path, ".*")
-        #destination = File.join(destination_base, basename)
-        #FileUtils.mkdir_p(destination)
 
         cmd = "#{executable} -n #{path}"
         puts `#{cmd}`
