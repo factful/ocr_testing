@@ -39,8 +39,28 @@ examples:
 
 - `ruby ./lib/ocr.rb tesseract documents # ocr all the images in the documents directory`
 - `ruby ./lib/ocr.rb google google_cloud_vision/credentials.js documents/historical-executive_order_9066-japanese_internment.jpg`
+- `ruby ./lib/ocr.rb rasterize documents/`
 
 ## Installation
+
+Install the ruby dependencies:
+
+- Install bundler: `gem install bundler`
+- Install gems in the Gemfile: `bundle install`
+
+### mutool
+
+`mutool` is a PDF processing tool that's part of [`mupdf`][mupdf].  We're using it to read in a PDF and turn it into a directory of images.  `mutool` is widely available in open source package managers.
+
+Mac/Homebrew
+
+`brew install mupdf`
+
+Ubuntu: 
+
+`apt install mupdf-tools`
+
+[mupdf]: https://mupdf.com/docs/index.html
 
 ### Cloud Services
 
@@ -76,6 +96,8 @@ Ubuntu/Debian:
 - requires downloading [code from Github](https://github.com/tmbdev/ocropy)
 - requires downloading models
 
+OCRopus 2 requires python 2.x, 
+
 ```
 cd ocropy
 pip install -r requirements.txt
@@ -85,6 +107,10 @@ python setup.py install
 `ocropus-rpred` should now be available on the commandline.
 
 #### Calamari
+
+Calamari, because it solely recognizes single lines, is dependent on OCRopus's tools for improving contrast, deskewing and splitting images into pieces.  What's unfortunate about this arrangement is that Calamari requires python 3.x, and OCRopus requires python 2.x.
+
+There are a variety of tools that you can use to manage multiple installations of python.  For our purposes we relied on [`pyenv`][pyenv] and [`virtualenv`][virtualenv].  (If you're using `pyenv` please also note [the additional installation instructions](https://github.com/pyenv/pyenv/wiki#suggested-build-environment))
 
 - requires everything OCRopus requires
 - also requires python3
@@ -97,3 +123,6 @@ python setup.py install
 ```
 
 `calamari-predict` should now be available on the commandline.
+
+[pyenv]: https://github.com/pyenv/pyenv
+[virtualenv]: https://virtualenv.pypa.io/en/latest/
