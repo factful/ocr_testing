@@ -27,7 +27,7 @@ module OCR
         end
         
         hocr = options[:hocr] ? "hocr" : ""
-        cmd = "tesseract #{path} #{destination_base}.tesseract #{hocr}"
+        cmd = "tesseract --psm 1 #{path} #{destination_base}.tesseract #{hocr}"
         `#{cmd}`
       end
     end
