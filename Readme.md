@@ -33,7 +33,6 @@ The second, `whitefish_energy_vs_commonwealth_puerto_rico` is the full text of a
 
 The `/lib/` directory includes the scripts that we used to test each OCR client. Each tool requires some setup, but once you've got a tool installed, you can invoke it with:
 
-
 `ruby ./lib/ocr.rb [command]`
 
 For example once you have installed Tesseract, `ruby ./lib/ocr.rb tesseract documents` will use Tesseract to OCR all the images in the "documents" directory.
@@ -42,7 +41,7 @@ Once you have set up Google Cloud services and stored your credentials, `ruby ./
 
 ## Installation
 
-The script depends on a few ruby gems. Install them with:
+These scripts in this repository depend on a few ruby gems. Install them with:
 
 - Install Bundler first: `gem install bundler`
 - Then install gems in the Gemfile: `bundle install`
@@ -52,22 +51,21 @@ This script uses `mutool`, a PDF processing tool included in  [`mupdf`](https://
 - Mac/Homebrew `brew install mupdf`
 - Ubuntu `apt install mupdf-tools`
 
-
 ### Cloud Services
 
-Once you have set up your accounts on the appropriate cloud service, save your credentials into a `credentials.json` file.
+Each of the cloud services we tested requires you to authenticate your account. Our scripts look for those credentials in the `credentials.json` file in each directory.  
 
 #### Google Cloud Vision
 
 See the example in [`google_cloud_vision/credentials.sample.json`](https://github.com/factful/ocr_testing/blob/master/google_cloud_vision/credentials.sample.json)
 
-#### Azure Computer Vision
+#### Microsoft Azure Computer Vision
 
 See the example in [`azure/credentials.sample.json`](https://github.com/factful/ocr_testing/blob/master/azure/credentials.sample.json)
 
 #### Abbyy
 
-Abbyy provides a python script.
+Abbyy provides a python script, which is what we used. There's a copy of it in the Abbyy directory.
 
 ### Command Line Tools
 
@@ -85,14 +83,14 @@ Ubuntu/Debian:
 
 #### Calamari
 
-Calamari, because it solely recognizes single line images, is dependent on OCRopus's tools for improving contrast, deskewing and splitting images into pieces.  What's unfortunate about this arrangement is that Calamari requires python 3.x, and OCRopus requires python 2.x.  In hindsight, we could have also used `kraken` another OCR library forked from OCRopus
+Calamari depends on OCRopus's tools to improve contrast, and to deskew and split images. Unfortunately, Calamari requires python 3.x, and OCRopus requires python 2.x. In retrospect, `kraken` might have been easier to use, but here's what we actually did:
 
-There are a variety of tools that you can use to manage multiple installations of python.  For our purposes we relied on [`pyenv`][pyenv] and [`virtualenv`][virtualenv].  (If you're using `pyenv` please also note [the additional installation instructions](https://github.com/pyenv/pyenv/wiki#suggested-build-environment))
+We used [`pyenv`][pyenv] and [`virtualenv`][virtualenv] to manage multiple Python instances.  (If you're using `pyenv` please also note [the additional installation instructions](https://github.com/pyenv/pyenv/wiki#suggested-build-environment)).
 
-We installed python 3.6 (because tensorflow has [some issues installing on python 3.7](https://github.com/tensorflow/tensorflow/issues/17022)) with `pyenv`, and then used `virtualenv` to create a space to install calamari and it's dependencies.
+We installed Python 3.6 (because TensorFlow has [some issues with Python 3.7](https://github.com/tensorflow/tensorflow/issues/17022)) with `pyenv`, and then used `virtualenv` to create a space to install Calamari and its dependencies.
 
 ```
-# from the root of this directory first install python 3.6 and create a virtual env.
+# from the root of this directory first install Python 3.6 and create a virtual env.
 mkdir -p venv
 pyenv install 3.6.8
 virtualenv -p ~/.pyenv/versions/3.6.8/bin/python venv/calamari
@@ -103,12 +101,12 @@ virtualenv -p ~/.pyenv/versions/3.6.8/bin/python venv/calamari
 source venv/calamari/bin/activate
 # find the calamari source directory
 cd ../calamari
-# and install the dependencies and library.
+# then install the dependencies and library.
 pip install -r requirements.txt
 python setup.py install
 ```
 
-`calamari-predict` should now be available on the commandline.
+Now `calamari-predict` should now be available on the commandline.
 
 #### OCRopus
 
