@@ -42,6 +42,25 @@ Once you have set up Google Cloud services and stored your credentials, `ruby ./
 
 ## Installation
 
+Install the ruby dependencies:
+
+- Install bundler: `gem install bundler`
+- Install gems in the Gemfile: `bundle install`
+
+### mutool
+
+`mutool` is a PDF processing tool that's part of [`mupdf`][mupdf].  We're using it to read in a PDF and turn it into a directory of images.  `mutool` is widely available in open source package managers.
+
+Mac/Homebrew
+
+`brew install mupdf`
+
+Ubuntu:
+
+`apt install mupdf-tools`
+
+[mupdf]: https://mupdf.com/docs/index.html
+
 ### Cloud Services
 
 Once you have set up your accounts on the appropriate cloud service, save your credentials into a `credentials.json` file.
@@ -56,7 +75,7 @@ See the example in [`azure/credentials.sample.json`](https://github.com/factful/
 
 #### Abbyy
 
-Abbyy provides a python script. 
+Abbyy provides a python script.
 
 ### Command Line Tools
 
@@ -72,6 +91,33 @@ Ubuntu/Debian:
 
 `apt install tesseract tesseract-ocr-*`
 
+#### Calamari
+
+Calamari, because it solely recognizes single line images, is dependent on OCRopus's tools for improving contrast, deskewing and splitting images into pieces.  What's unfortunate about this arrangement is that Calamari requires python 3.x, and OCRopus requires python 2.x.  In hindsight, we could have also used `kraken` another OCR library forked from OCRopus
+
+There are a variety of tools that you can use to manage multiple installations of python.  For our purposes we relied on [`pyenv`][pyenv] and [`virtualenv`][virtualenv].  (If you're using `pyenv` please also note [the additional installation instructions](https://github.com/pyenv/pyenv/wiki#suggested-build-environment))
+
+We installed python 3.6 (because tensorflow has [some issues installing on python 3.7](https://github.com/tensorflow/tensorflow/issues/17022)) with `pyenv`, and then used `virtualenv` to create a space to install calamari and it's dependencies.
+
+```
+# from the root of this directory first install python 3.6 and create a virtual env.
+mkdir -p venv
+pyenv install 3.6.8
+virtualenv -p ~/.pyenv/versions/3.6.8/bin/python venv/calamari
+```
+
+```
+# activate the virtualenv
+source venv/calamari/bin/activate
+# find the calamari source directory
+cd ../calamari
+# and install the dependencies and library.
+pip install -r requirements.txt
+python setup.py install
+```
+
+`calamari-predict` should now be available on the commandline.
+
 #### OCRopus
 
 - requires python 2.7
@@ -79,23 +125,23 @@ Ubuntu/Debian:
 - requires downloading models
 
 ```
-cd ocropy
+mkdir -p venv
+pyenv install 2.7
+virtualenv -p ~/.pyenv/versions/2.7/bin/python venv/ocropus
+```
+
+```
+# activate the ocropus virtualenv
+source venv/ocropus/bin/activate
+# find the ocropus source directory
+cd ../ocropy
+# and install the dependencies
 pip install -r requirements.txt
 python setup.py install
 ```
 
-`ocropus-rpred` should now be available on the commandline.
+`ocropus-rpred` should now be available on the command line.
 
-#### Calamari
 
-- requires everything OCRopus requires
-- also requires python3
-- requires tensorflow
-
-```
-cd calamari
-pip install -r requirements.txt
-python setup.py install
-```
-
-`calamari-predict` should now be available on the commandline.
+[pyenv]: https://github.com/pyenv/pyenv
+[virtualenv]: https://virtualenv.pypa.io/en/latest/
