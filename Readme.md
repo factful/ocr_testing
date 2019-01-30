@@ -42,24 +42,16 @@ Once you have set up Google Cloud services and stored your credentials, `ruby ./
 
 ## Installation
 
-Install the ruby dependencies:
+The script depends on a few ruby gems. Install them with:
 
-- Install bundler: `gem install bundler`
-- Install gems in the Gemfile: `bundle install`
+- Install Bundler first: `gem install bundler`
+- Then install gems in the Gemfile: `bundle install`
 
-### mutool
+This script uses `mutool`, a PDF processing tool included in  [`mupdf`](https://mupdf.com/docs/index.html), to convert multi-page PDFs into images. `mutool` is widely available in open source package managers:
 
-`mutool` is a PDF processing tool that's part of [`mupdf`][mupdf].  We're using it to read in a PDF and turn it into a directory of images.  `mutool` is widely available in open source package managers.
+- Mac/Homebrew `brew install mupdf`
+- Ubuntu `apt install mupdf-tools`
 
-Mac/Homebrew
-
-`brew install mupdf`
-
-Ubuntu:
-
-`apt install mupdf-tools`
-
-[mupdf]: https://mupdf.com/docs/index.html
 
 ### Cloud Services
 
