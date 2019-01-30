@@ -114,16 +114,14 @@ If your installation was successful, `calamari-predict` will be available at the
 
 OCRopus requires python 2.7, so it's helpful to use `pyenv` to manage instances.
 
-
-- requires python 2.7
-- requires downloading [code from Github](https://github.com/tmbdev/ocropy)
-- requires downloading models
-
 ```
 mkdir -p venv
 pyenv install 2.7
 virtualenv -p ~/.pyenv/versions/2.7/bin/python venv/ocropus
 ```
+Clone OCRopus with
+
+`git clone https://github.com/tmbdev/ocropy.git`
 
 ```
 # activate the ocropus virtualenv
@@ -134,6 +132,8 @@ cd ../ocropy
 pip install -r requirements.txt
 python setup.py install
 ```
+
+To get OCRopus working you'll also need to download trained models. 
 
 If your installation was successful, `ocropus-rpred` will be available at the command line, and you can run `ruby ./lib/ocr.rb calamari {filename}` to OCR files with Calamari.
 
