@@ -33,7 +33,7 @@ The second, `whitefish_energy_vs_commonwealth_puerto_rico` is the full text of a
 
 The `/lib/` directory includes the scripts that we used to test each OCR client. Each tool requires some setup, but once you've got a tool installed, you can invoke it with:
 
-`ruby ./lib/ocr.rb [command]`
+`ruby ./lib/ocr.rb {command}`
 
 For example once you have installed Tesseract, `ruby ./lib/ocr.rb tesseract documents` will use Tesseract to OCR all the images in the "documents" directory.
 
@@ -108,7 +108,7 @@ pip install -r requirements.txt
 python setup.py install
 ```
 
-Now `calamari-predict` should now be available on the commandline.
+Now `calamari-predict` should now be available on the command line, and you can it directly or run `ruby ./lib/ocr.rb calamari {filename}` to OCR files with Calamari. 
 
 #### OCRopus
 
