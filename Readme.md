@@ -108,6 +108,13 @@ pip install -r requirements.txt
 python setup.py install
 ```
 
+Calamari provides some pretrained data models to power its recognizer.  You should download them into a `models` directory in the Calamari directory.
+
+```
+cd calamari
+git clone https://github.com/Calamari-OCR/calamari_models models
+```
+
 If your installation was successful, `calamari-predict` will be available at the command line, and you can run `ruby ./lib/ocr.rb calamari {filename}` to OCR files with Calamari.
 
 #### OCRopus
@@ -133,7 +140,7 @@ pip install -r requirements.txt
 python setup.py install
 ```
 
-To get OCRopus working you'll also need to download trained models. 
+To get OCRopus working you'll also need to download trained models.  [Prebuilt models for OCRopus can be found on the OCRopus wiki](https://github.com/tmbdev/ocropy/wiki/Models#latin-scripts).  You should download the english model into a `models` directory in the OCRopus directory.
 
 If your installation was successful, `ocropus-rpred` will be available at the command line, and you can run `ruby ./lib/ocr.rb calamari {filename}` to OCR files with Calamari.
 
