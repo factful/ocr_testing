@@ -65,11 +65,9 @@ See the example in [`azure/credentials.sample.json`](https://github.com/factful/
 
 #### Abbyy
 
-Abbyy provides a python script to produce basic OCR functions.
+Abbyy provides a python script, which is what we used. You can feed your id and password to the script when you run it:
 
-Linux & MacOS users can invoke their script like so:
-
-`ABBYY_APPID="YOUR APP ID HERE" ABBYY_PWD="YOUR APP PASSWORD HERE" python process.py [path to image] [path to output]`
+`ABBYY_APPID="{YOUR APPID}" ABBYY_PWD="{YOUR PASSWORD}" python process.py {PATH TO IMAGE} {PATH TO OUTPUT}`
 
 ### Command Line Tools
 
