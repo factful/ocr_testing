@@ -85,11 +85,11 @@ Ubuntu/Debian:
 
 #### Calamari
 
-Calamari depends on OCRopus's tools to improve contrast, and to deskew and split images. Unfortunately, Calamari requires python 3.x, and OCRopus requires python 2.x. In retrospect, `kraken` might have been easier to use, but here's what we actually did:
+Calamari depends on OCRopus's tools to improve contrast, and to deskew and split images. Unfortunately, Calamari requires python 3.x, and OCRopus requires python 2.x. Because TensorFlow has [issues with Python 3.7](https://github.com/tensorflow/tensorflow/issues/17022), we used Python 3.6. In retrospect, using `kraken` might been much smoother, but here's what we actually did:
 
-We used [`pyenv`][pyenv] and [`virtualenv`][virtualenv] to manage multiple Python instances.  (If you're using `pyenv` please also note [the additional installation instructions](https://github.com/pyenv/pyenv/wiki#suggested-build-environment)).
+We used [`pyenv`][pyenv] and [`virtualenv`][virtualenv] to manage multiple Python instances.  (If you're using `pyenv` please also note [their installation instructions](https://github.com/pyenv/pyenv/wiki#suggested-build-environment)).
 
-We installed Python 3.6 (because TensorFlow has [some issues with Python 3.7](https://github.com/tensorflow/tensorflow/issues/17022)) with `pyenv`, and then used `virtualenv` to create a space to install Calamari and its dependencies.
+We installed Python 3.6 with `pyenv`, and then used `virtualenv` to create a space to install Calamari and its dependencies.
 
 ```
 # from the root of this directory first install Python 3.6 and create a virtual env.
@@ -108,9 +108,12 @@ pip install -r requirements.txt
 python setup.py install
 ```
 
-Now `calamari-predict` should now be available on the command line, and you can it directly or run `ruby ./lib/ocr.rb calamari {filename}` to OCR files with Calamari. 
+If your installation was successful, `calamari-predict` will be available at the command line, and you can run `ruby ./lib/ocr.rb calamari {filename}` to OCR files with Calamari.
 
 #### OCRopus
+
+OCRopus requires python 2.7, so it's helpful to use `pyenv` to manage instances.
+
 
 - requires python 2.7
 - requires downloading [code from Github](https://github.com/tmbdev/ocropy)
@@ -132,7 +135,7 @@ pip install -r requirements.txt
 python setup.py install
 ```
 
-`ocropus-rpred` should now be available on the command line.
+If your installation was successful, `ocropus-rpred` will be available at the command line, and you can run `ruby ./lib/ocr.rb calamari {filename}` to OCR files with Calamari.
 
 
 [pyenv]: https://github.com/pyenv/pyenv
