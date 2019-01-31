@@ -96,13 +96,15 @@ We installed Python 3.6 with `pyenv`, and then used `virtualenv` to create a spa
 mkdir -p venv
 pyenv install 3.6.8
 virtualenv -p ~/.pyenv/versions/3.6.8/bin/python venv/calamari
+# activate the virtualenv
+source venv/calamari/bin/activate
 ```
 
 ```
-# activate the virtualenv
-source venv/calamari/bin/activate
-# find the calamari source directory
-cd ../calamari
+# use git to download the calamari code
+cd ..
+git clone https://github.com/Calamari-OCR/calamari.git
+cd calamari
 # then install the dependencies and library.
 pip install -r requirements.txt
 python setup.py install
@@ -112,7 +114,7 @@ Calamari provides some pretrained data models to power its recognizer.  You shou
 
 ```
 cd calamari
-git clone https://github.com/Calamari-OCR/calamari_models models
+git clone https://github.com/Calamari-OCR/calamari_models.git models
 ```
 
 If your installation was successful, `calamari-predict` will be available at the command line, and you can run `ruby ./lib/ocr.rb calamari {filename}` to OCR files with Calamari.
