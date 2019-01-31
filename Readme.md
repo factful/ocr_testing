@@ -99,7 +99,7 @@ source venv/calamari/bin/activate
 ```
 
 ```
-# use git to download the calamari code
+# Clone the calamari code
 cd ..
 git clone https://github.com/Calamari-OCR/calamari.git
 cd calamari
