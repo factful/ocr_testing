@@ -46,7 +46,7 @@ These scripts in this repository depend on a few ruby gems. Install them with:
 - Install Bundler first: `gem install bundler`
 - Then install gems in the Gemfile: `bundle install`
 
-This script uses `mutool`, a PDF processing tool included in  [`mupdf`](https://mupdf.com/docs/index.html), to convert multi-page PDFs into images. `mutool` is widely available in open source package managers:
+This script uses `mutool`, a PDF processing tool included in  [`mupdf`](https://mupdf.com/docs/index.html), to convert multi-page PDFs into images. Install with:
 
 - Mac/Homebrew `brew install mupdf`
 - Ubuntu `apt install mupdf-tools`
@@ -57,15 +57,21 @@ Each of the cloud services we tested requires you to authenticate your account. 
 
 #### Google Cloud Vision
 
-See the example in [`google_cloud_vision/credentials.sample.json`](https://github.com/factful/ocr_testing/blob/master/google_cloud_vision/credentials.sample.json)
+The Ruby Gems that Google Cloud Vision requires are included in the bundle install for this repository.  
+
+Google Cloud Vision requires authentication credentials. Use the example in [`google_cloud_vision/credentials.sample.json`](https://github.com/factful/ocr_testing/blob/master/google_cloud_vision/credentials.sample.json) to create your own `credentials.json` and make sure to point to it when you invoke `./lib/ocr.rb`, eg.
+
+ `ruby ./lib/ocr.rb google google_cloud_vision/credentials.json documents/document.jpg`
 
 #### Microsoft Azure Computer Vision
 
-See the example in [`azure/credentials.sample.json`](https://github.com/factful/ocr_testing/blob/master/azure/credentials.sample.json)
+The Ruby Gems that Microsoft Azure requires are included in the bundle install for this repository.  
+
+Use the example in [`azure/credentials.sample.json`](https://github.com/factful/ocr_testing/blob/master/azure/credentials.sample.json) to create your own `credentials.json` and make sure to point to it when you invoke `./lib/ocr.rb`.
 
 #### Abbyy
 
-Abbyy provides a python script, which is what we used. You can feed your id and password to the script when you run it:
+Abbyy provides a python script, which is what we used to test documents in Abbyy. You can feed your id and password to the script when you run it:
 
 `ABBYY_APPID="{YOUR APPID}" ABBYY_PWD="{YOUR PASSWORD}" python process.py {PATH TO IMAGE} {PATH TO OUTPUT}`
 
