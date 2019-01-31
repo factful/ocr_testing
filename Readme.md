@@ -71,6 +71,8 @@ Abbyy provides a python script, which is what we used. You can feed your id and 
 
 ### Command Line Tools
 
+The free and open source tools that we tested are all command line applications that you'll run locally.
+
 #### Tesseract
 
 `tesseract` is far and away the best maintained and easiest to use of the command line tools we tested. You should be able to install it with a package manager.
@@ -109,7 +111,6 @@ python setup.py install
 Calamari provides some pre-trained data models to power its recognizer.  You should download them into a `models` directory in the Calamari directory.
 
 ```
-cd calamari
 git clone https://github.com/Calamari-OCR/calamari_models.git models
 ```
 
