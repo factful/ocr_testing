@@ -1,17 +1,6 @@
-Notes:
-* Lindsay will check w/Ryan on embedding
-* Intro needs more. Sections like:
-* * Focus some grounding methods in the intro: this is dense but people need a compass. What are they about to hear and why should they pay attention. Blow out the first graph.
-* * Testing Method
-* *
-
-Scaffolding the viewer
-Limit the embeds to the end and capture key takeaways in screenshots/ images.
-
-
 # Welcome
 
-This repository contains the scripts and outputs from our OCR comparison tests.
+This repository contains the scripts and outputs from our OCR comparison tests. ARTICLE LINK TK
 
 We identified a few sample documents to run through OCR systems so we could compare the results. The documents we used in our final write up are these:
 
