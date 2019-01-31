@@ -73,15 +73,11 @@ Abbyy provides a python script, which is what we used. You can feed your id and 
 
 #### Tesseract
 
-`tesseract` far and away the best maintained and easiest to use of the command line tools we tested.  It is available via most package managers.
+`tesseract` is far and away the best maintained and easiest to use of the command line tools we tested. You should be able to install it with a package manager.
 
-On MacOS:
+MacOS: `brew install tesseract --with-all-languages`
 
-`brew install tesseract --with-all-languages`
-
-Ubuntu/Debian:
-
-`apt install tesseract tesseract-ocr-*`
+Ubuntu/Debian: `apt install tesseract tesseract-ocr-*`
 
 #### Calamari
 
@@ -108,7 +104,7 @@ pip install -r requirements.txt
 python setup.py install
 ```
 
-Calamari provides some pretrained data models to power its recognizer.  You should download them into a `models` directory in the Calamari directory.
+Calamari provides some pre-trained data models to power its recognizer.  You should download them into a `models` directory in the Calamari directory.
 
 ```
 cd calamari
