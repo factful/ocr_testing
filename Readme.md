@@ -1,6 +1,6 @@
 # Welcome
 
-This repository contains the scripts and outputs from our OCR comparison tests. ARTICLE LINK TK
+This repository contains the scripts and outputs from our [OCR comparison tests](https://source.opennews.org/articles/so-many-ocr-options/). 
 
 We identified a few sample documents to run through OCR systems so we could compare the results. The documents we used in our final write up are these:
 
